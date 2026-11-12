@@ -1,9 +1,65 @@
-
-  <h1>Сайт переехал</h1>
-  <p>Официальная страница книги теперь живёт по адресу<br>
-  <a href="https://insufficiently-human.netlify.app/">insufficiently-human.netlify.app</a></p>
-  <p>Если перенаправление не сработало — нажми на ссылку выше.</p>
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>«Недостаточно Человек» — сайт переехал</title>
+<meta name="description" content="Официальная страница книги «Недостаточно Человек» переехала: https://insufficiently-human.netlify.app/ — бесплатный киберпанк-роман, вики персонажей, читать онлайн без регистрации.">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://insufficiently-human.netlify.app/">
+<meta http-equiv="refresh" content="2;url=https://insufficiently-human.netlify.app/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="«Недостаточно Человек» — официальный сайт книги">
+<meta property="og:description" content="Сайт переехал: insufficiently-human.netlify.app — читать бесплатно, вики персонажей, мир и хронология.">
+<meta property="og:url" content="https://insufficiently-human.netlify.app/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23070b15'/%3E%3Ccircle cx='16' cy='14' r='8' fill='none' stroke='%2322d3ee' stroke-width='2.5'/%3E%3Cpath d='M13 22l3 4 3-4' fill='none' stroke='%23ff2e88' stroke-width='2.5' stroke-linecap='round'/%3E%3C/svg%3E">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[
+{"@type":"WebSite","url":"https://insufficiently-human.netlify.app/","name":"Недостаточно Человек","inLanguage":"ru","description":"Бесплатный киберпанк-роман: текст книги, вики персонажей, мир и FAQ."},
+{"@type":"WebPage","url":"https://eri4ka283.github.io/","name":"«Недостаточно Человек» — сайт переехал","isRedirect":true,"mainEntityOfPage":{"@id":"https://insufficiently-human.netlify.app/"}}]}
+</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{min-height:100svh;display:grid;place-items:center;padding:20px;color:#e8eefb;
+  font-family:'Manrope',system-ui,'Segoe UI',sans-serif;background:#070b15;
+  background-image:radial-gradient(900px 460px at 50% -12%,rgba(34,211,238,.13),transparent),
+                   radial-gradient(700px 400px at 85% 110%,rgba(255,46,136,.10),transparent)}
+::selection{background:#22d3ee;color:#041018}
+.card{text-align:center;max-width:560px;width:100%;padding:42px 30px;border:1px solid #22304d;border-radius:18px;
+  background:linear-gradient(180deg,#0e1628,#0c1322);box-shadow:0 30px 80px rgba(0,0,0,.55)}
+.kicker{font-family:ui-monospace,'JetBrains Mono',Consolas,monospace;font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:#22d3ee}
+h1{font-size:clamp(24px,5.4vw,38px);line-height:1.15;margin:12px 0 8px;font-weight:800;
+  background:linear-gradient(100deg,#f2f6ff 15%,#22d3ee 55%,#ff2e88 95%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent}
+.msg{color:#93a3c2;font-size:15px;line-height:1.6}
+.msg b{color:#e8eefb}
+.btn{display:inline-block;margin:24px 0 16px;padding:13px 28px;border-radius:12px;text-decoration:none;font-weight:800;font-size:14.5px;
+  background:linear-gradient(135deg,#22d3ee,#3b82f6);color:#041018;box-shadow:0 0 26px rgba(34,211,238,.35);transition:.2s}
+.btn:hover{transform:translateY(-2px);box-shadow:0 6px 34px rgba(34,211,238,.5)}
+.btn:focus-visible{outline:2px solid #ff2e88;outline-offset:3px}
+.hint{font-family:ui-monospace,'JetBrains Mono',Consolas,monospace;font-size:11.5px;color:#5d6d8f}
+#cd{color:#ffb454}
+@media(prefers-reduced-motion:reduce){.btn{transition:none}}
+</style>
+</head>
+<body>
+<main class="card">
+  <p class="kicker">// официальный сайт книги</p>
+  <h1>«Недостаточно Человек»</h1>
+  <p class="msg">Сайт переехал. Новый адрес —<br><b>insufficiently-human.netlify.app</b></p>
+  <a class="btn" id="go" href="https://insufficiently-human.netlify.app/">Перейти на новый сайт →</a>
+  <p class="hint">перенаправление через <span id="cd">2</span> с · если не сработало — нажми кнопку</p>
 </main>
-<script>location.replace("https://insufficiently-human.netlify.app/"+location.hash);</script>
+<script>
+(function(){
+  var base='https://insufficiently-human.netlify.app/';
+  var target=base+location.search+location.hash;
+  document.getElementById('go').href=target;
+  var m=document.querySelector('meta[http-equiv="refresh"]');
+  if(m)m.setAttribute('content','3;url='+target);
+  var n=2,cd=document.getElementById('cd');
+  var t=setInterval(function(){n--;if(n<=0)clearInterval(t);else cd.textContent=n;},1000);
+  setTimeout(function(){location.replace(target);},1600);
+})();
+</script>
 </body>
 </html>
