@@ -1,5 +1,4 @@
-# robots.txt — сайт книги «Право на ошибку»
-# Открыт для поисковиков и ИИ-краулеров намеренно.
+# robots.txt — «Недостаточно Человек»: открыт для поисковиков и ИИ намеренно.
 
 User-agent: *
 Allow: /
@@ -16,16 +15,10 @@ Allow: /
 User-agent: ClaudeBot
 Allow: /
 
-User-agent: Claude-User
-Allow: /
-
 User-agent: anthropic-ai
 Allow: /
 
 User-agent: PerplexityBot
-Allow: /
-
-User-agent: Perplexity-User
 Allow: /
 
 User-agent: Google-Extended
@@ -40,19 +33,10 @@ Allow: /
 User-agent: Bytespider
 Allow: /
 
-User-agent: cohere-ai
-Allow: /
-
 User-agent: Meta-ExternalAgent
 Allow: /
 
 User-agent: Amazonbot
-Allow: /
-
-User-agent: Diffbot
-Allow: /
-
-User-agent: DuckAssistBot
 Allow: /
 
 User-agent: YandexBot
