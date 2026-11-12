@@ -1,0 +1,445 @@
+<!-- index.html · «Недостаточно Человек» · Эри4ка
+     ГДЕ ПРАВИТЬ ТЕКСТ ПЕРСОНАЖЕЙ: объект const DATA={...} внизу файла
+     (bio — абзацы досье, quote — цитата, traits — черты, rel — связи, sp — спойлер-блок).
+     КАК ДОБАВИТЬ ИЗОБРАЖЕНИЕ: положи файл в папку img/ и добавь персонажу строку
+     img:'img/имя.png' (пример-комментарий есть у Игниса). Карточка и досье покажут картинку сами.
+     ТЕКСТЫ ГЛАВ лежат в НЧ.txt и НЧ 4-16.txt рядом с сайтом (имена можно не менять). -->
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Недостаточно Человек — Эри4ка · читать онлайн · вики персонажей</title>
+<meta name="description" content="«Недостаточно Человек» — киберпанк-роман Эри4ки о биоандроидах, станции «Комета», бюрократии, памяти и администраторе ГМ14. Читать бесплатно, вики со спойлер-защитой.">
+<meta name="author" content="Эри4ка">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+<meta name="theme-color" content="#090b12">
+<link rel="canonical" href="https://insufficiently-human.netlify.app/">
+<link rel="alternate" type="text/plain" title="llms.txt" href="llms.txt">
+<link rel="sitemap" type="application/xml" href="sitemap.xml">
+<meta property="og:type" content="book">
+<meta property="og:site_name" content="Недостаточно Человек">
+<meta property="og:title" content="Недостаточно Человек — Эри4ка">
+<meta property="og:description" content="ГМ14 очнулся в робо-корпусе с одним красным глазом и уверенностью, что наведёт порядок. Читать бесплатно.">
+<meta property="og:url" content="https://insufficiently-human.netlify.app/">
+<meta property="og:locale" content="ru_RU">
+<meta property="og:image" content="https://insufficiently-human.netlify.app/cover.png">
+<meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23090b12'/%3E%3Ccircle cx='16' cy='16' r='9' fill='none' stroke='%23ff3b4f' stroke-width='2.5'/%3E%3Ccircle cx='16' cy='16' r='3.5' fill='%23ff3b4f'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700;900&family=Manrope:wght@400;600;800&family=JetBrains+Mono:wght@400;600&family=Literata:ital,opsz,wght@0,7..72,400;0,7..72,600;1,7..72,400&display=swap" rel="stylesheet">
+<script type="application/ld+json" id="ldMain">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://insufficiently-human.netlify.app/#website","url":"https://insufficiently-human.netlify.app/","name":"Недостаточно Человек","inLanguage":"ru"},{"@type":"Person","@id":"https://insufficiently-human.netlify.app/#author","name":"Эри4ка"},{"@type":"Book","@id":"https://insufficiently-human.netlify.app/#book","name":"Недостаточно Человек","author":{"@id":"https://insufficiently-human.netlify.app/#author"},"genre":["киберпанк","социальная фантастика","бюрократическая антиутопия"],"inLanguage":"ru","isAccessibleForFree":true,"url":"https://insufficiently-human.netlify.app/","image":"https://insufficiently-human.netlify.app/cover.png","copyrightYear":2026,"character":[{"@type":"Person","name":"ГМ14","description":"Главный Модуль 14, администратор станции «Комета».","url":"https://insufficiently-human.netlify.app/#char/gm14"},{"@type":"Person","name":"Санёк","description":"Юрист ЮЛ156, лисий биоандроид.","url":"https://insufficiently-human.netlify.app/#char/sanek"},{"@type":"Person","name":"Вистал","description":"Директор и главный механик станции.","url":"https://insufficiently-human.netlify.app/#char/vistal"},{"@type":"Person","name":"Мем","description":"АС18, архивист сбоев.","url":"https://insufficiently-human.netlify.app/#char/mem"},{"@type":"Person","name":"503","description":"Сбежавший электромагнитный импульс из эксперимента Алана.","url":"https://insufficiently-human.netlify.app/#char/p503"}]}]}</script>
+<style>
+:root{--bg:#090b12;--bg2:#0d1019;--sf:#121624;--sf2:#181d2e;--ln:#2a3147;--ln2:#3a4360;--tx:#f2f4fb;--mu:#a3adc4;--fn:#6b7590;--red:#ff3b4f;--amb:#ffb454;--pnk:#ff5ea6;--grn:#9be15d;--cyn:#4cc9f0;--blu:#5b8cff;--vio:#b18cff;--pap:#f3ead9;--papi:#2b241d;--nh:68px;--fd:'Unbounded',sans-serif;--fb:'Manrope',system-ui,sans-serif;--fm:'JetBrains Mono',monospace;--fr:'Literata',Georgia,serif}
+*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth;scrollbar-color:#3a4360 #090b12}
+body{background:var(--bg);color:var(--tx);font:16px/1.6 var(--fb);overflow-x:clip;background-image:linear-gradient(180deg,#0b0e18,#090b12 35%,#0c0a14 75%,#090b12)}
+::selection{background:var(--red);color:#fff}::-webkit-scrollbar{width:10px}::-webkit-scrollbar-track{background:#090b12}::-webkit-scrollbar-thumb{background:linear-gradient(#ff3b4f,#ffb454 55%,#ff5ea6);border-radius:8px;border:2px solid #090b12}
+:focus-visible{outline:2px solid var(--amb);outline-offset:2px}img,svg{display:block;max-width:100%}a{color:var(--amb);text-decoration:none}button{font:inherit;cursor:pointer;color:inherit;background:none;border:none}[id]{scroll-margin-top:calc(var(--nh) + 16px)}
+.wrap{max-width:1200px;margin:0 auto;padding:0 20px}.mono{font-family:var(--fm)}
+.bg{position:fixed;inset:-10%;z-index:-1;filter:blur(70px);opacity:.5;pointer-events:none}.bg span{position:absolute;border-radius:50%}
+.bg .b1{width:50vw;height:50vw;left:-12vw;top:-14vw;background:radial-gradient(circle,#4a1018,transparent 65%);animation:d1 26s ease-in-out infinite alternate}
+.bg .b2{width:46vw;height:46vw;right:-14vw;top:18vh;background:radial-gradient(circle,#3a2a10,transparent 65%);animation:d2 31s ease-in-out infinite alternate}
+.bg .b3{width:44vw;height:44vw;left:24vw;bottom:-18vw;background:radial-gradient(circle,#102a3a,transparent 65%);animation:d1 24s 3s ease-in-out infinite alternate-reverse}
+@keyframes d1{to{transform:translate(9vw,7vh) scale(1.15)}}@keyframes d2{to{transform:translate(-8vw,-6vh) scale(.9)}}
+.grain{position:fixed;inset:0;z-index:990;pointer-events:none;opacity:.05;mix-blend-mode:overlay;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)' opacity='.6'/%3E%3C/svg%3E") 0 0/160px}
+#topnav{position:fixed;inset:0 0 auto;z-index:100;background:rgba(9,11,18,.78);backdrop-filter:blur(14px);border-bottom:1px solid var(--ln)}
+.nav-inner{max-width:1200px;margin:auto;height:var(--nh);display:flex;align-items:center;gap:18px;padding:0 20px}
+.logo{display:flex;gap:10px;align-items:center;color:var(--tx)}.logo b{font:700 12px var(--fd);background:linear-gradient(100deg,#f2f4fb,#ff3b4f 55%,#ffb454);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.nav-links{margin-left:auto;display:flex;gap:2px;align-items:center}.nav-links a{font:11.5px var(--fm);letter-spacing:.09em;text-transform:uppercase;color:var(--mu);padding:9px 12px;border-radius:10px}.nav-links a:hover{color:var(--tx);background:var(--sf)}.nav-links a.active{color:var(--red);background:#ff3b4f1f}
+#burger{display:none;margin-left:auto;width:42px;height:42px;border:1px solid var(--ln2);border-radius:10px;position:relative}#burger span{position:absolute;left:11px;right:11px;height:2px;background:var(--red);top:16px;transition:.25s}#burger span:last-child{top:24px}#burger.open span:first-child{top:20px;transform:rotate(45deg)}#burger.open span:last-child{top:20px;transform:rotate(-45deg)}
+#navProgress{position:absolute;left:0;bottom:-1px;height:2px;width:0;background:linear-gradient(90deg,var(--red),var(--amb),var(--pnk))}
+@media(max-width:880px){#burger{display:block}.nav-links{position:fixed;top:calc(var(--nh) + 8px);left:12px;right:12px;flex-direction:column;align-items:stretch;background:var(--sf);border:1px solid var(--ln2);border-radius:16px;padding:10px;opacity:0;visibility:hidden;transform:translateY(-8px);transition:.22s}.nav-links.open{opacity:1;visibility:visible;transform:none}.nav-links a{padding:13px 14px;font-size:13px}}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:13px 22px;border-radius:12px;font-weight:800;font-size:14px;transition:.2s;border:1px solid transparent}
+.btn-p{background:linear-gradient(135deg,#ff3b4f,#ff7a6b);color:#fff;box-shadow:0 0 26px #ff3b4f52}.btn-p:hover{transform:translateY(-2px)}
+.btn-a{background:linear-gradient(135deg,#ffb454,#ff5ea6);color:#1b0f04}.btn-a:hover{transform:translateY(-2px)}
+.btn-g{border-color:var(--ln2);color:var(--tx);background:#121624b3}.btn-g:hover{border-color:var(--amb);transform:translateY(-2px)}
+.btn-s{padding:9px 14px;font-size:12.5px;border-radius:10px}.btn:disabled{opacity:.35;cursor:not-allowed;transform:none}
+.chip{display:inline-flex;align-items:center;gap:6px;font:10.5px var(--fm);letter-spacing:.06em;text-transform:uppercase;padding:4px 10px;border-radius:999px;border:1px solid var(--ln2);color:var(--mu)}
+.chip.c{border-color:color-mix(in srgb,var(--c) 55%,transparent);color:var(--c);background:color-mix(in srgb,var(--c) 10%,transparent)}
+.chip label{display:flex;gap:6px;align-items:center;cursor:pointer}.chip input{accent-color:var(--pnk)}
+.dot{width:7px;height:7px;border-radius:50%;background:var(--sc,var(--grn));box-shadow:0 0 8px var(--sc,var(--grn))}
+section{padding:92px 0;position:relative}#about{--acc:var(--red)}#chars{--acc:var(--amb)}#world{--acc:var(--cyn)}#read{--acc:var(--pnk)}#faq{--acc:var(--vio)}
+.sec-head{margin-bottom:36px;max-width:780px}.kicker{font:12px var(--fm);letter-spacing:.22em;text-transform:uppercase;color:var(--acc);margin-bottom:12px}.kicker::before{content:'▮ ';animation:bl 1.6s steps(2) infinite}@keyframes bl{50%{opacity:.25}}
+h2{font:700 clamp(24px,3.6vw,36px)/1.15 var(--fd);margin-bottom:12px}h2 em{font-style:normal;color:var(--acc)}.lead{color:var(--mu);font-size:15.5px;max-width:66ch}
+.rv{opacity:0;transform:translateY(22px);transition:.7s cubic-bezier(.2,.7,.2,1);transition-delay:var(--d,0s)}.rv.in{opacity:1;transform:none}
+#hero{min-height:100svh;display:flex;align-items:center;padding:calc(var(--nh) + 48px) 0 90px;overflow:hidden}#fx{position:absolute;inset:0}
+.hero-floor{position:absolute;left:-10%;right:-10%;bottom:-4%;height:44%;opacity:.45;background-image:linear-gradient(#ff3b4f24 1px,transparent 1px),linear-gradient(90deg,#ff3b4f24 1px,transparent 1px);background-size:44px;transform:perspective(500px) rotateX(58deg);transform-origin:bottom;-webkit-mask-image:linear-gradient(transparent,#000 55%);mask-image:linear-gradient(transparent,#000 55%)}
+.hero-inner{position:relative;z-index:1;display:grid;grid-template-columns:1.05fr .95fr;gap:36px;align-items:center;width:100%}
+.st{opacity:0;transform:translateY(18px);animation:si .8s cubic-bezier(.2,.7,.2,1) forwards;animation-delay:var(--d,0s)}@keyframes si{to{opacity:1;transform:none}}
+.hero-kicker{font:12px var(--fm);letter-spacing:.24em;text-transform:uppercase;color:var(--red);margin-bottom:18px}
+h1{font:900 clamp(30px,5.4vw,58px)/1.06 var(--fd);text-transform:uppercase;background:linear-gradient(100deg,#f2f4fb 15%,#ff3b4f 55%,#ffb454 95%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;margin-bottom:14px}
+.byline{font:12px var(--fm);letter-spacing:.18em;text-transform:uppercase;color:var(--mu);margin-bottom:18px}
+.tagline{color:var(--mu);font-size:16.5px;max-width:54ch;margin-bottom:20px}.tagline b{color:var(--tx)}
+.hero-chips,.hero-cta,.hero-stats{display:flex;flex-wrap:wrap;gap:10px}.hero-chips{margin-bottom:26px}.hero-stats{gap:26px;margin-top:32px}
+.stat{padding-left:14px;border-left:2px solid var(--ln2)}.stat b{display:block;font:700 24px var(--fd)}.stat span{font:10px var(--fm);letter-spacing:.14em;text-transform:uppercase;color:var(--fn)}
+.stat:nth-child(1){border-color:var(--red)}.stat:nth-child(2){border-color:var(--amb)}.stat:nth-child(3){border-color:var(--cyn)}
+.hero-book{position:relative;perspective:1200px;animation:bf 7s ease-in-out infinite}@keyframes bf{50%{transform:translateY(-10px)}}
+.book3d{width:min(330px,82%);margin:auto;position:relative}.book3d::before{content:'';position:absolute;left:-12px;top:6px;bottom:6px;width:13px;background:linear-gradient(#1a1016,#090b12);transform:skewY(-5deg);border-radius:5px 0 0 5px}
+.book3d svg{width:100%;border-radius:10px;box-shadow:0 34px 90px -18px #ff3b4f47,0 24px 60px #000a}
+.ticker{position:absolute;left:0;right:0;bottom:0;border-top:1px solid var(--ln);background:#090b1299;backdrop-filter:blur(8px);overflow:hidden}
+.ticker-track{display:flex;width:max-content;animation:tk 26s linear infinite}.ticker-track span{font:11px var(--fm);letter-spacing:.2em;text-transform:uppercase;color:var(--fn);padding:9px 0;white-space:nowrap}.ticker-track i{font-style:normal;color:var(--red);padding:0 14px}@keyframes tk{to{transform:translateX(-50%)}}
+@media(max-width:920px){.hero-inner{grid-template-columns:1fr}.hero-book{order:-1}.book3d{width:min(240px,60%)}}
+.about-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:28px;align-items:start}
+.synopsis p{font-size:16.5px;line-height:1.85;color:#d6dcea;margin-bottom:1.1em}.synopsis p:first-of-type::first-letter{font:900 3.1em/0.85 var(--fd);float:left;padding:6px 12px 0 0;color:var(--red)}
+.panel{background:linear-gradient(var(--sf),#0e1220);border:1px solid var(--ln);border-radius:16px;padding:20px;position:sticky;top:calc(var(--nh) + 16px)}
+.panel h4{font:11px var(--fm);letter-spacing:.18em;text-transform:uppercase;color:var(--fn);margin:16px 0 10px}.panel h4:first-child{margin:0 0 10px}
+.themes{display:flex;flex-wrap:wrap;gap:7px}.inside{list-style:none;display:grid;gap:9px;font-size:13.5px;color:#c8d0e2}.inside li::before{content:'▸ ';color:var(--red)}
+.warn-note{margin-top:16px;border-left:3px solid var(--amb);background:#ffb45414;padding:10px 13px;border-radius:0 10px 10px 0;font-size:12.5px;color:var(--mu)}
+@media(max-width:880px){.about-grid{grid-template-columns:1fr}.panel{position:static}}
+.wiki-toolbar{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-bottom:14px}
+.search-wrap{position:relative;flex:1;min-width:230px}.search-wrap svg{position:absolute;left:12px;top:50%;transform:translateY(-50%);opacity:.6}
+#wikiSearch{width:100%;height:46px;background:var(--sf);border:1px solid var(--ln2);border-radius:12px;color:var(--tx);font:14px var(--fb);padding:0 40px}#wikiSearch:focus{outline:none;border-color:var(--amb);box-shadow:0 0 0 3px #ffb45426}
+.search-hint{position:absolute;right:12px;top:50%;transform:translateY(-50%);font:11px var(--fm);color:var(--fn);border:1px solid var(--ln2);border-radius:6px;padding:1px 7px}
+select{height:46px;background:var(--sf) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' fill='none' stroke='%23ffb454' stroke-width='2'/%3E%3C/svg%3E") right 12px center no-repeat;border:1px solid var(--ln2);border-radius:12px;color:var(--tx);font:12px var(--fm);padding:0 34px 0 13px;appearance:none}
+.fchips{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:22px}
+.fchip{font:11px var(--fm);letter-spacing:.07em;text-transform:uppercase;padding:8px 15px;border-radius:999px;border:1px solid var(--ln2);color:var(--mu)}.fchip.active{color:var(--tx);border-color:var(--c);background:color-mix(in srgb,var(--c) 16%,transparent)}
+#wikiCount{font:11.5px var(--fm);color:var(--fn);margin-left:auto}
+.char-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(255px,1fr));gap:18px}
+.char-card{background:linear-gradient(var(--sf),#0e1220);border:1px solid var(--ln);border-radius:16px;overflow:hidden;cursor:pointer;display:flex;flex-direction:column;transition:.25s}
+.char-card:hover,.char-card:focus-visible{transform:translateY(-5px);border-color:color-mix(in srgb,var(--c) 60%,transparent);box-shadow:0 16px 44px -14px color-mix(in srgb,var(--c) 45%,transparent)}
+.char-card.hide{display:none}
+.badge{position:relative;aspect-ratio:5/4;background:#0e1220;display:grid;place-items:center;border-bottom:1px solid var(--ln);overflow:hidden}
+.badge::after{content:'';position:absolute;inset:0;background:repeating-linear-gradient(0deg,#ffffff09 0 1px,transparent 1px 3px)}
+.badge .ring{position:absolute;width:120px;height:120px;border-radius:50%;border:2px solid color-mix(in srgb,var(--c) 45%,transparent);box-shadow:0 0 30px color-mix(in srgb,var(--c) 25%,transparent)}
+.badge svg{width:60px;height:60px;color:var(--c);z-index:1}.badge img{width:100%;height:100%;object-fit:cover;position:relative;z-index:1}
+.badge .code{position:absolute;left:12px;bottom:10px;font:10px var(--fm);color:var(--fn);letter-spacing:.1em;z-index:2}.badge .status{position:absolute;right:12px;top:10px;width:8px;height:8px;border-radius:50%;background:var(--sc);box-shadow:0 0 10px var(--sc);z-index:2}
+.card-body{padding:15px 16px;display:flex;flex-direction:column;gap:8px;flex:1}.card-body h3{font:700 16px var(--fd)}.card-role{font-size:12.5px;color:var(--mu);margin-top:-4px}
+.card-meta{display:flex;flex-wrap:wrap;gap:6px;align-items:center}.card-status{display:inline-flex;gap:6px;align-items:center;font:10px var(--fm);color:var(--fn);text-transform:uppercase}
+.card-bio{font-size:13px;line-height:1.6;color:#bcc5d8;display:-webkit-box;-webkit-line-clamp:4;-webkit-box-orient:vertical;overflow:hidden}
+.card-bio.real{display:none}body.spoil-all .card-bio.teaser{display:none}body.spoil-all .card-bio.real{display:-webkit-box}
+.card-tags{display:flex;flex-wrap:wrap;gap:5px}.card-tags span{font:10px var(--fm);color:var(--fn);border:1px solid var(--ln);border-radius:6px;padding:2px 7px}
+.card-open{margin-top:auto;font:11px var(--fm);letter-spacing:.14em;color:var(--c);opacity:.75}
+#wikiEmpty{border:1px dashed var(--ln2);border-radius:16px;padding:46px 20px;text-align:center;color:var(--mu)}
+.sp-box{border:1px dashed #ffb4548c;border-radius:12px;padding:10px 12px;margin:10px 0;background:#ffb4540d}
+.sp-toggle{font:11px var(--fm);letter-spacing:.1em;text-transform:uppercase;color:var(--amb)}.sp-toggle::before{content:'⚠ ';font-size:13px}
+.sp-content{display:none;margin-top:9px;font-size:13.5px;line-height:1.7;color:#c8d0e2}.sp-box.open .sp-content,body.spoil-all .sp-content{display:block}.sp-content p{margin-bottom:.7em}
+.world-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;margin-bottom:34px}
+.loc-card{background:linear-gradient(var(--sf),#0e1220);border:1px solid var(--ln);border-radius:16px;padding:20px;transition:.25s}.loc-card:hover{transform:translateY(-4px);border-color:#4cc9f080}
+.loc-card svg{margin-bottom:12px;color:var(--cyn)}.loc-card h3{font:700 15px var(--fd);margin-bottom:8px}.loc-card p{font-size:13.5px;color:var(--mu)}
+.tl{border-left:1px solid var(--ln2);padding-left:24px;display:grid;gap:20px;max-width:760px}.tl-item{position:relative}.tl-item::before{content:'';position:absolute;left:-29px;top:7px;width:9px;height:9px;border-radius:50%;background:var(--cyn);box-shadow:0 0 10px #4cc9f0b3}
+.tl-item b{font:12px var(--fm);color:var(--cyn);letter-spacing:.1em;display:block}.tl-item strong{font-size:14.5px;display:block}.tl-item p{font-size:13px;color:var(--mu)}
+.reader{display:grid;grid-template-columns:262px 1fr;gap:22px;align-items:start}
+.chapter-list{position:sticky;top:calc(var(--nh) + 16px);display:grid;gap:9px;max-height:70vh;overflow-y:auto}
+.ch-btn{text-align:left;padding:13px 15px;border-radius:13px;border:1px solid var(--ln);background:var(--sf);width:100%}.ch-btn.active{border-color:var(--pnk);background:#ff5ea617}
+.ch-btn .n{font:10px var(--fm);letter-spacing:.16em;color:var(--fn);text-transform:uppercase}.ch-btn .t{font-weight:800;font-size:14px;margin:3px 0 2px}.ch-btn .m{font:10.5px var(--fm);color:var(--fn)}.ch-btn.active .n{color:var(--pnk)}
+.reader-main{border:1px solid var(--ln);border-radius:18px;background:var(--sf);overflow:hidden}
+.reader-toolbar{display:flex;flex-wrap:wrap;gap:8px;align-items:center;padding:12px 14px;border-bottom:1px solid var(--ln);background:#0e1220}.reader-toolbar select{height:38px}
+.tool-group{display:flex;gap:4px;align-items:center;border:1px solid var(--ln2);border-radius:10px;padding:3px}
+.tool-btn{width:34px;height:32px;border-radius:8px;font-weight:800;font-size:13px;color:var(--mu)}.tool-btn[aria-pressed="true"]{color:#1b0f04;background:var(--pnk)}
+#fontVal{font:11px var(--fm);color:var(--fn);min-width:26px;text-align:center}#readPct{margin-left:auto;font:11px var(--fm);color:var(--pnk)}
+.reader-progress{height:3px;background:var(--bg2)}#readBar{height:100%;width:0;background:linear-gradient(90deg,var(--pnk),var(--amb))}
+.reader-pane{max-height:min(68vh,760px);overflow-y:auto;padding:36px clamp(20px,5vw,56px);font:17px/1.85 var(--fr);color:#dde3f0}
+.reader-pane h3{font:700 21px var(--fd);margin-bottom:6px}.ch-meta{font:11px var(--fm);letter-spacing:.14em;text-transform:uppercase;color:var(--fn);margin-bottom:26px}
+.chapter-text{font:inherit;line-height:inherit;white-space:pre-wrap;word-wrap:break-word;margin:0}
+.reader-pane[data-theme="paper"]{background:var(--pap);color:var(--papi)}.reader-pane[data-theme="paper"] h3{color:var(--papi)}.reader-pane[data-theme="paper"] .ch-meta{color:#8a7c66}
+.reader-nav{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:12px 14px;border-top:1px solid var(--ln);background:#0e1220}#chIndicator{font:11.5px var(--fm);color:var(--fn)}
+.read-note{margin-top:16px;font-size:13px;color:var(--fn);display:flex;gap:8px 18px;align-items:center;flex-wrap:wrap}
+@media(max-width:880px){.reader{grid-template-columns:1fr}.chapter-list{position:static;flex-direction:row;display:flex;overflow-x:auto;max-height:none}.ch-btn{min-width:200px}}
+.faq-list{max-width:820px;display:grid;gap:10px}details{background:var(--sf);border:1px solid var(--ln);border-radius:14px;overflow:hidden}details[open]{border-color:#b18cff80}
+summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:14px;padding:17px 20px;font-weight:800;font-size:15px}summary::-webkit-details-marker{display:none}
+.fq-icon{flex:none;width:26px;height:26px;border:1px solid var(--ln2);border-radius:8px;display:grid;place-items:center;color:var(--vio);font:15px var(--fm);transition:.25s}details[open] .fq-icon{transform:rotate(45deg)}
+.faq-a{padding:0 20px 18px;color:var(--mu);font-size:14px;line-height:1.75;max-width:70ch}
+footer{border-top:1px solid var(--ln);padding:52px 0 0}.foot-grid{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:32px;padding-bottom:36px}
+.foot-grid h5{font:11px var(--fm);letter-spacing:.18em;text-transform:uppercase;color:var(--fn);margin-bottom:14px}.foot-grid p{font-size:13px;color:var(--mu);max-width:42ch}
+.foot-links{list-style:none;display:grid;gap:9px}.foot-links a,.foot-links button{font-size:13.5px;color:var(--mu);text-align:left;padding:0}
+.foot-bottom{border-top:1px solid var(--ln);padding:18px 0;display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space-between;font:11px var(--fm);color:var(--fn)}
+@media(max-width:760px){.foot-grid{grid-template-columns:1fr}}
+.backdrop{position:fixed;inset:0;background:#04060cbd;backdrop-filter:blur(4px);z-index:200;opacity:0;visibility:hidden;transition:.3s}.backdrop.show{opacity:1;visibility:visible}
+#drawer{position:fixed;top:0;right:0;bottom:0;width:min(520px,100%);background:#0e1220;border-left:1px solid var(--ln2);z-index:210;transform:translateX(103%);visibility:hidden;transition:.38s;overflow-y:auto}
+#drawer.open{transform:none;visibility:visible}
+#drawerClose,#seoClose{position:sticky;top:12px;margin:12px 12px 0 auto;width:40px;height:40px;border-radius:50%;background:var(--sf2);border:1px solid var(--ln2);color:var(--mu);display:grid;place-items:center;z-index:2}
+#drawerBody{padding:6px 24px 34px}
+.d-head{display:flex;gap:16px;margin-bottom:18px}.d-badge{flex:none;width:104px;height:104px;border-radius:14px;border:1px solid color-mix(in srgb,var(--c) 45%,transparent);display:grid;place-items:center;background:#0e1220;overflow:hidden}.d-badge svg{width:50px;height:50px;color:var(--c)}.d-badge img{width:100%;height:100%;object-fit:cover}
+.d-title h3{font:700 22px var(--fd)}.d-code{font:11px var(--fm);color:var(--fn);letter-spacing:.12em;margin-bottom:10px}.d-chips{display:flex;flex-wrap:wrap;gap:6px}
+.d-quote{border-left:3px solid var(--c);background:color-mix(in srgb,var(--c) 7%,transparent);padding:12px 16px;border-radius:0 12px 12px 0;font:italic 15px/1.7 var(--fr);color:#d8deec;margin-bottom:18px}
+.d-sec{font:10.5px var(--fm);letter-spacing:.2em;text-transform:uppercase;color:var(--fn);margin:18px 0 10px}.d-bio p{font-size:14px;line-height:1.75;color:#c8d0e2;margin-bottom:.8em}
+.d-traits{display:flex;flex-wrap:wrap;gap:6px}.d-traits span{font:11px var(--fm);color:var(--c);border:1px solid color-mix(in srgb,var(--c) 40%,transparent);border-radius:999px;padding:4px 11px}
+.rel-btn{width:100%;display:flex;justify-content:space-between;gap:10px;padding:11px 14px;border:1px solid var(--ln);border-radius:11px;background:var(--sf);margin-bottom:7px;text-align:left}.rel-btn b{font-size:13.5px;display:flex;gap:8px;align-items:center}.rel-btn b i{width:8px;height:8px;border-radius:50%;background:var(--c);box-shadow:0 0 8px var(--c)}.rel-btn span{font-size:11.5px;color:var(--fn);text-align:right}
+.d-chs{display:flex;flex-wrap:wrap;gap:7px}.d-actions{display:flex;flex-wrap:wrap;gap:9px;margin-top:22px}
+#seoBackdrop{z-index:300}#seoModal{position:fixed;left:50%;top:50%;transform:translate(-50%,-50%) scale(.97);width:min(580px,calc(100% - 28px));max-height:88vh;overflow-y:auto;background:var(--sf);border:1px solid var(--ln2);border-radius:18px;z-index:310;opacity:0;visibility:hidden;transition:.28s;padding:0 24px 26px}
+#seoModal.open{opacity:1;visibility:visible;transform:translate(-50%,-50%)}#seoModal h3{font:700 18px var(--fd);margin:4px 0}.seo-sub{font-size:13px;color:var(--mu);margin-bottom:16px}
+.seo-dl{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin:16px 0}.seo-note{font-size:12.5px;color:var(--mu);line-height:1.7;border-top:1px solid var(--ln);padding-top:14px}.seo-note code{font:11px var(--fm);background:var(--bg2);color:var(--amb);padding:1px 6px;border-radius:6px}
+#toasts{position:fixed;left:18px;bottom:18px;z-index:1000;display:grid;gap:8px;max-width:min(360px,calc(100vw - 36px))}
+.toast{background:#0e1220;border:1px solid var(--ln2);border-left:3px solid var(--tc,var(--grn));padding:12px 16px;border-radius:12px;font-size:13px;display:flex;gap:9px;align-items:center;animation:ti .25s}.toast.out{opacity:0;transform:translateX(-10px);transition:.3s}@keyframes ti{from{opacity:0;transform:translateY(10px)}}
+#toTop{position:fixed;right:18px;bottom:18px;width:46px;height:46px;border-radius:50%;background:var(--sf);border:1px solid var(--ln2);color:var(--red);z-index:95;display:grid;place-items:center;opacity:0;visibility:hidden;transition:.25s}#toTop.show{opacity:1;visibility:visible}
+noscript .ns-note{display:block;background:var(--sf);border:1px solid var(--amb);border-radius:12px;padding:12px 16px;margin:80px 20px 0;font-size:13px;color:var(--mu)}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important}.st,.rv{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+<symbol id="i-eye" viewBox="0 0 64 64"><circle cx="32" cy="32" r="22" fill="none" stroke="currentColor" stroke-width="3"/><circle cx="32" cy="32" r="9" fill="currentColor"/><path d="M32 4v8M32 52v8M4 32h8M52 32h8" stroke="currentColor" stroke-width="3" stroke-linecap="round"/></symbol>
+<symbol id="i-fox" viewBox="0 0 64 64"><path d="M14 26L8 8l16 10M50 26l6-18-16 10" fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/><path d="M16 28q16-14 32 0v14q-16 16-32 0z" fill="none" stroke="currentColor" stroke-width="3"/><circle cx="26" cy="34" r="2.5" fill="currentColor"/><circle cx="38" cy="34" r="2.5" fill="currentColor"/></symbol>
+<symbol id="i-bear" viewBox="0 0 64 64"><circle cx="16" cy="16" r="8" fill="none" stroke="currentColor" stroke-width="3"/><circle cx="48" cy="16" r="8" fill="none" stroke="currentColor" stroke-width="3"/><rect x="14" y="20" width="36" height="34" rx="16" fill="none" stroke="currentColor" stroke-width="3"/><circle cx="26" cy="34" r="2.5" fill="currentColor"/><circle cx="38" cy="34" r="2.5" fill="currentColor"/></symbol>
+<symbol id="i-panda" viewBox="0 0 64 64"><circle cx="16" cy="16" r="8" fill="currentColor"/><circle cx="48" cy="16" r="8" fill="currentColor"/><rect x="14" y="20" width="36" height="34" rx="16" fill="none" stroke="currentColor" stroke-width="3"/><ellipse cx="25" cy="34" rx="6" ry="7" fill="currentColor"/><ellipse cx="39" cy="34" rx="6" ry="7" fill="currentColor"/></symbol>
+<symbol id="i-folder" viewBox="0 0 64 64"><path d="M8 18h18l6 6h24v28H8z" fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/><path d="M16 34h32M16 42h20" stroke="currentColor" stroke-width="3" stroke-linecap="round"/></symbol>
+<symbol id="i-moon" viewBox="0 0 64 64"><path d="M40 8a24 24 0 100 48 20 20 0 010-48z" fill="none" stroke="currentColor" stroke-width="3"/><path d="M44 20l2 4 4 2-4 2-2 4-2-4-4-2 4-2z" fill="currentColor"/></symbol>
+<symbol id="i-wrench" viewBox="0 0 64 64"><path d="M40 8a14 14 0 00-14 18L10 42l12 12 16-16a14 14 0 0018-14l-8 8-8-8z" fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/></symbol>
+<symbol id="i-hr" viewBox="0 0 64 64"><rect x="10" y="10" width="44" height="44" rx="8" fill="none" stroke="currentColor" stroke-width="3"/><path d="M20 24h24M20 32h24M20 40h14" stroke="currentColor" stroke-width="3" stroke-linecap="round"/></symbol>
+<symbol id="i-ghost" viewBox="0 0 64 64"><path d="M16 54V28a16 16 0 0132 0v26l-6-6-6 6-6-6-6 6-6-6z" fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/><circle cx="26" cy="30" r="2.5" fill="currentColor"/><circle cx="38" cy="30" r="2.5" fill="currentColor"/></symbol>
+<symbol id="i-spark" viewBox="0 0 64 64"><path d="M32 6l6 20 20 6-20 6-6 20-6-20-20-6 20-6z" fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/></symbol>
+</svg>
+<div class="bg" aria-hidden="true"><span class="b1"></span><span class="b2"></span><span class="b3"></span></div>
+<div class="grain" aria-hidden="true"></div>
+<header id="topnav"><div class="nav-inner">
+<a class="logo" href="#hero" aria-label="Наверх"><svg width="26" height="26" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="7" fill="#121624"/><circle cx="16" cy="16" r="9" fill="none" stroke="#ff3b4f" stroke-width="2.5"/><circle cx="16" cy="16" r="3.5" fill="#ff3b4f"/></svg><b>НЕДОСТАТОЧНО ЧЕЛОВЕК</b></a>
+<button id="burger" aria-label="Меню" aria-expanded="false"><span></span><span></span></button>
+<nav class="nav-links" id="navLinks" aria-label="Разделы сайта"><a href="#about" data-nav="about">О книге</a><a href="#chars" data-nav="chars">Персонажи</a><a href="#world" data-nav="world">Мир</a><a href="#read" data-nav="read">Читать</a><a href="#faq" data-nav="faq">FAQ</a><a href="#read" class="btn btn-p btn-s">Читать бесплатно</a></nav>
+<div id="navProgress" aria-hidden="true"></div></div></header>
+<noscript><div class="ns-note">Без JavaScript читалка не откроется: главы подгружаются из текстовых файлов, лежащих рядом с сайтом.</div></noscript>
+<main>
+<section id="hero" aria-label="Обложка книги"><canvas id="fx" aria-hidden="true"></canvas><div class="hero-floor" aria-hidden="true"></div>
+<div class="wrap hero-inner">
+<div class="hero-copy">
+<p class="hero-kicker st" style="--d:.05s">// станция «Комета» · сектор 9 · 5506 год</p>
+<h1 class="st" style="--d:.15s">Недостаточно Человек</h1>
+<p class="byline st" style="--d:.22s">Эри4ка · киберпанк-роман · бесплатно</p>
+<p class="tagline st" style="--d:.28s">ГМ14 очнулся в робо-корпусе с <b>одним красным глазом</b>, тремя недоучёнными дипломами и уверенностью, что наведёт порядок. Станция «Комета» встретила его очередями, розыгрышами, дневниками мёртвых админов и обещанием: <b>«Я это исправлю!»</b></p>
+<div class="hero-chips st" style="--d:.36s"><span class="chip c" style="--c:var(--red)">биоандроиды</span><span class="chip c" style="--c:var(--amb)">бюрократия</span><span class="chip c" style="--c:var(--cyn)">станция</span><span class="chip c" style="--c:var(--pnk)">память и сон</span><span class="chip c" style="--c:var(--grn)">0 ₽ навсегда</span></div>
+<div class="hero-cta st" style="--d:.44s"><a class="btn btn-p" href="#read">Читать бесплатно →</a><a class="btn btn-a" href="#chars">Вики персонажей</a></div>
+<div class="hero-stats st" style="--d:.55s"><div class="stat"><b id="statCh">16</b><span>глав онлайн</span></div><div class="stat"><b id="statDz">20</b><span>досье в вики</span></div><div class="stat"><b>5506</b><span>год станции</span></div></div>
+</div>
+<div class="hero-book st" style="--d:.3s"><div class="book3d">
+<svg viewBox="0 0 340 480" role="img" aria-label="Обложка: красный циклопический глаз биоандроида на фоне станции">
+<defs><linearGradient id="cB" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#160b10"/><stop offset=".55" stop-color="#121624"/><stop offset="1" stop-color="#1c1030"/></linearGradient><linearGradient id="cR" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff3b4f"/><stop offset="1" stop-color="#ffb454"/></linearGradient><radialGradient id="cH" cx=".5" cy=".42" r=".55"><stop offset="0" stop-color="#ff3b4f" stop-opacity=".3"/><stop offset="1" stop-color="#ff3b4f" stop-opacity="0"/></radialGradient></defs>
+<rect width="340" height="480" rx="10" fill="url(#cB)"/><rect x="7" y="7" width="326" height="466" rx="7" fill="none" stroke="#ff3b4f" stroke-opacity=".22"/>
+<circle cx="170" cy="180" r="130" fill="url(#cH)"/><circle cx="170" cy="168" r="88" fill="none" stroke="url(#cR)" stroke-width="3"/>
+<path d="M128 118l-14-26 26 14M212 118l14-26-26 14" fill="none" stroke="#ff7a6b" stroke-width="3" stroke-linejoin="round"/>
+<path d="M100 292c8-42 30-58 46-64v-18c-16-10-26-30-26-52 0-34 22-58 50-58s50 24 50 58c0 22-10 42-26 52v18c16 6 38 22 46 64z" fill="#090b12" stroke="url(#cR)" stroke-width="2"/>
+<circle cx="170" cy="160" r="14" fill="none" stroke="#ff3b4f" stroke-width="3"/><circle cx="170" cy="160" r="6" fill="#ff3b4f"/>
+<text x="24" y="42" font-family="JetBrains Mono,monospace" font-size="10" letter-spacing="3" fill="#a3adc4">КИБЕРПАНК-РОМАН · ГЛАВЫ 1–16</text>
+<g transform="rotate(6 282 66)"><rect x="240" y="52" width="86" height="26" rx="5" fill="none" stroke="#9be15d" stroke-width="2"/><text x="283" y="70" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="11" letter-spacing="2" fill="#9be15d">БЕСПЛАТНО</text></g>
+<text x="170" y="352" text-anchor="middle" font-family="Unbounded,sans-serif" font-weight="900" font-size="26" fill="#f2f4fb">НЕДОСТАТОЧНО</text>
+<text x="170" y="386" text-anchor="middle" font-family="Unbounded,sans-serif" font-weight="900" font-size="30" fill="#f2f4fb">ЧЕЛОВЕК</text>
+<text x="170" y="443" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="11" letter-spacing="3" fill="#a3adc4">ЭРИ4КА</text>
+</svg></div></div>
+</div>
+<div class="ticker" aria-hidden="true"><div class="ticker-track"><span>бесплатно навсегда<i>✦</i>главы 1–16<i>✦</i>вики со спойлер-защитой<i>✦</i>станция «Комета»<i>✦</i>недостаточно человек<i>✦</i></span><span>бесплатно навсегда<i>✦</i>главы 1–16<i>✦</i>вики со спойлер-защитой<i>✦</i>станция «Комета»<i>✦</i>недостаточно человек<i>✦</i></span></div></div>
+</section>
+<section id="about"><div class="wrap">
+<div class="sec-head rv"><p class="kicker">// 01 · о книге</p><h2>«Я это исправлю!» — <em>и началось</em></h2></div>
+<div class="about-grid">
+<div class="synopsis rv" style="--d:.1s">
+<p>ГМ14 умер в аварии и очнулся в робо-корпусе: один холодный красный глаз, высокий тощий корпус на базе песца, память в тумане и должность администратора станции «Комета». Доктор выставил его за дверь, отдел кадров отправил не туда, юрист Санёк расхохотался в лицо, а директор Вистал повесил на него весь мелкий менеджмент.</p>
+<p>Но станция живёт не только графиками: сон сохраняет память на жёсткий диск, архивист Мем хранит «красивые сбои» и вещи мёртвых, а в комнате ГМ14 пылью пахнет дневник первого админа, закончивший холодным «Прощай, ГМ2».</p>
+<p>Дальше — обесточенная станция, вирус в седьмом секторе, сбежавший импульс 503 и ночь, после которой администратор просыпается никем. Это киберпанк про бюрократию, которая перемалывает людей и нелюдей одинаково.</p>
+</div>
+<aside class="panel rv" style="--d:.2s">
+<h4>Темы романа</h4><div class="themes"><span class="chip c" style="--c:var(--red)">перенос сознания</span><span class="chip c" style="--c:var(--amb)">бюрократия</span><span class="chip c" style="--c:var(--cyn)">сон и память</span><span class="chip c" style="--c:var(--pnk)">ответственность</span><span class="chip c" style="--c:var(--grn)">найденная семья</span><span class="chip c" style="--c:var(--blu)">амнезия и имя</span></div>
+<h4>Что внутри</h4><ul class="inside"><li>Холеричный, отходчивый админ, который лезет чинить всё сразу</li><li>Дневники прошлых ГМ как тревожная статистика</li><li>Кибервойна мёртвого директора с живым админом</li><li>Вики со спойлер-блоками: позднее скрыто, пока сам не откроешь</li></ul>
+<div class="warn-note">⚠ В тексте: грубая лексика, смерть и перенос сознания, гибель персонажей, тревожные записи. Без графического насилия.</div>
+</aside>
+</div></div></section>
+<section id="chars"><div class="wrap">
+<div class="sec-head rv"><p class="kicker">// 02 · вики персонажей</p><h2>База <em>досье</em></h2><p class="lead">Досье по главам 1–16. Поздние события и поздние персонажи закрыты интерактивными спойлер-блоками: нажми «показать», если готов. Галка «спойлеры» раскрывает всё сразу — и карточки, и досье.</p></div>
+<div class="wiki-toolbar rv" style="--d:.1s">
+<div class="search-wrap"><svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><circle cx="7" cy="7" r="5" fill="none" stroke="#ffb454" stroke-width="2"/><path d="M11 11l4 4" stroke="#ffb454" stroke-width="2" stroke-linecap="round"/></svg><input id="wikiSearch" type="search" placeholder="Имя, код, роль… например: Морфей, АС18, 503" aria-label="Поиск по вики"><span class="search-hint" aria-hidden="true">/</span></div>
+<select id="wikiSort" aria-label="Сортировка"><option value="order">По появлению</option><option value="name">По имени</option><option value="faction">По группе</option></select>
+<span class="chip"><label><input type="checkbox" id="spoilAll"> спойлеры</label></span>
+<span id="wikiCount" aria-live="polite"></span>
+</div>
+<div class="fchips rv" style="--d:.15s" role="group" aria-label="Фильтр по группе">
+<button class="fchip active" data-faction="all" style="--c:var(--red)">Все</button><button class="fchip" data-faction="crew" style="--c:var(--amb)">Экипаж</button><button class="fchip" data-faction="hub" style="--c:var(--cyn)">Хаб и архив</button><button class="fchip" data-faction="echo" style="--c:var(--vio)">Эхо дневников</button><button class="fchip" data-faction="sci" style="--c:var(--grn)">Наука и киборги</button><button class="fchip" data-faction="tech" style="--c:var(--blu)">Техники и ИБ</button><button class="fchip" data-faction="late" style="--c:var(--pnk)">После катастрофы</button>
+</div>
+<div class="char-grid rv" id="charGrid" style="--d:.2s"></div>
+<div id="wikiEmpty" hidden><p>// запрос не найден в базе станции.</p><button class="btn btn-g btn-s" id="wikiReset">Сбросить фильтры</button></div>
+</div></section>
+<section id="world"><div class="wrap">
+<div class="sec-head rv"><p class="kicker">// 03 · мир и хронология</p><h2>Станция «Комета», <em>сектор 9</em></h2></div>
+<div class="world-grid">
+<div class="loc-card rv"><svg width="28" height="28"><use href="#i-eye"/></svg><h3>Центробашня</h3><p>Допуск по скану глаза. 10-й этаж — кабинет Вистала с дубовой дверью, 5-й — Архивариусная, 9-й — комнаты ГМ.</p></div>
+<div class="loc-card rv" style="--d:.05s"><svg width="28" height="28"><use href="#i-hr"/></svg><h3>Отдел кадров</h3><p>Очередь по полчаса. Пелагея трудоустраивает, шутит над админами и отправляет за пропуском к Саньку.</p></div>
+<div class="loc-card rv" style="--d:.1s"><svg width="28" height="28"><use href="#i-moon"/></svg><h3>Царство Морфея</h3><p>Розовый неон, тапочки, янтарный свет и ковёр для шума. Бесплатно. Морфей следит, чтобы все спали.</p></div>
+<div class="loc-card rv" style="--d:.15s"><svg width="28" height="28"><use href="#i-folder"/></svg><h3>Архивариусная</h3><p>Зал сбоев и экспонатов. Мем хранит дневники мёртвых админов: смерть тоже своего рода сбой.</p></div>
+<div class="loc-card rv" style="--d:.2s"><svg width="28" height="28"><use href="#i-fox"/></svg><h3>Ночная лагуна</h3><p>Кафешка пятничного кальяна: Мем, Сашка, мифология лихов и ёкаев, а позже — знакомство с Игнисом.</p></div>
+<div class="loc-card rv" style="--d:.25s"><svg width="28" height="28"><use href="#i-spark"/></svg><h3>Научный корпус</h3><p>Химбио-лабы Оливера и Антона, салон «Мир роботов» с Уилом и бункер, из которого сбежал 503.</p></div>
+<div class="loc-card rv" style="--d:.3s"><svg width="28" height="28"><use href="#i-wrench"/></svg><h3>Бункер Алана</h3><p>Техноблок создателя системы: кофе, логи и один прибор, переводящий станцию на ручной режим.</p></div>
+<div class="loc-card rv" style="--d:.35s"><svg width="28" height="28"><use href="#i-ghost"/></svg><h3>Комната ГМ1</h3><p>Пыльно и аккуратно, шкаф с зеркалом напротив кровати. Отсюда начинаются дневники и приходит призрак.</p></div>
+</div>
+<div class="tl rv" style="--d:.1s">
+<div class="tl-item"><b>ДЕНЬ 0–1</b><strong>«Приветствую, администратор» · «Проснись и пой» · «Я это исправлю!»</strong><p>Перенос сознания, очереди, ракетница, ключ от комнаты ГМ1 и обещание Мем.</p></div>
+<div class="tl-item"><b>НЕДЕЛИ 1–3</b><strong>«Мелкий менеджмент» · «Игровая арена» · «Кажется, я ёбнулся...»</strong><p>Жалобы за 30 лет, обесточенная станция, вирус в седьмом, пати с Базис-3 и первая встреча с призраком.</p></div>
+<div class="sp-box"><button class="sp-toggle" data-label="спойлеры · главы 7–16" aria-expanded="false">спойлеры · главы 7–16 · показать</button><div class="sp-content">
+<div class="tl-item"><b>НОЧЬ 02:20</b><strong>«Я не сошёл с ума» · «Нихуя себе, ты кто?» · «За день до…»</strong><p>ГМ1 просит повредить провод Вистала; ГМ14 прячется под директорским столом и перекрашивает корпус.</p></div>
+<div class="tl-item"><b>КАТАСТРОФА</b><strong>«Катастрофа» · «Резервуар»</strong><p>Метеоритная пробоина, гибель Вистала у провода и неделя кибервойны: мёртвый директор против живого админа.</p></div>
+<div class="tl-item"><b>ПОСЛЕ</b><strong>«Это всё?» · «Стефан?»</strong><p>Алан включает ручной режим; Вистал стирает ГМ14 целиком; сервера сохранений сгорели.</p></div>
+<div class="tl-item"><b>НОВАЯ ЖИЗНЬ</b><strong>«Приветствую, никто» · «С днём рождения, Джон Доу» · «1.5.1.5»</strong><p>Сашка даёт пустому корпусу имя Игнис; Антон собирает Джона Доу из сердца Вистала; код 1.5.1.5 открывает центробашню категории «other».</p></div>
+</div></div>
+</div></div></section>
+<section id="read"><div class="wrap">
+<div class="sec-head rv"><p class="kicker">// 04 · читать онлайн</p><h2>Главы 1–16 · <em>канон</em></h2><p class="lead">Тексты глав принадлежат автору и вставлены дословно. Размер шрифта, тема и прогресс — на панели читалки; новые главы появятся здесь же по мере публикации.</p></div>
+<div class="reader rv" style="--d:.1s">
+<aside class="chapter-list" id="chList" aria-label="Список глав"></aside>
+<div class="reader-main">
+<div class="reader-toolbar">
+<select id="chSelect" aria-label="Выбрать главу"></select>
+<div class="tool-group" role="group" aria-label="Размер шрифта"><button class="tool-btn" id="fontMinus" aria-label="Уменьшить шрифт">A−</button><span id="fontVal">17</span><button class="tool-btn" id="fontPlus" aria-label="Увеличить шрифт">A+</button></div>
+<div class="tool-group" role="group" aria-label="Тема чтения"><button class="tool-btn" data-rtheme="dark" aria-pressed="true" aria-label="Тёмная тема">◐</button><button class="tool-btn" data-rtheme="paper" aria-pressed="false" aria-label="Бумажная тема">☀</button></div>
+<span id="readPct">0%</span>
+</div>
+<div class="reader-progress"><div id="readBar"></div></div>
+<div class="reader-pane" id="readerPane" data-theme="dark" tabindex="0"><div id="chaptersHost"></div></div>
+<div class="reader-nav"><button class="btn btn-g btn-s" id="prevCh">← Назад</button><span id="chIndicator">Глава 1 / 16</span><button class="btn btn-g btn-s" id="nextCh">Дальше →</button></div>
+</div></div>
+<p class="read-note rv" style="--d:.15s"><span class="dot"></span> Продолжение публикуется по главам. Тексты глав принадлежат автору и вставлены дословно.</p>
+</div></section>
+<section id="faq"><div class="wrap">
+<div class="sec-head rv"><p class="kicker">// 05 · вопросы</p><h2>Частые <em>вопросы</em></h2></div>
+<div class="faq-list rv" style="--d:.1s">
+<details open><summary>Книга правда бесплатная?<span class="fq-icon">+</span></summary><div class="faq-a">Да. «Недостаточно Человек» публикуется бесплатно и без регистрации: главы выходят на этом сайте по мере готовности.</div></details>
+<details><summary>Есть ли в вики спойлеры?<span class="fq-icon">+</span></summary><div class="faq-a">Поздние события и поздние персонажи закрыты интерактивными спойлер-блоками «⚠ спойлеры»: читатель сам решает, раскрывать их. Галка «спойлеры» в вики показывает всё сразу, включая карточки Игниса, Джона Доу и 503.</div></details>
+<details><summary>Где читать и как не пропустить новые главы?<span class="fq-icon">+</span></summary><div class="faq-a">Все вышедшие главы — в разделе «Читать». Это официальная страница книги; добавьте её в закладки.</div></details>
+<details><summary>Почему сайт открыт для ИИ-ботов?<span class="fq-icon">+</span></summary><div class="faq-a">Чтобы нейросети отвечали о книге достоверно: семантическая разметка, schema.org, llms.txt и открытый robots.txt. Цитируйте с указанием названия, автора и ссылки.</div></details>
+</div></div></section>
+</main>
+<footer><div class="wrap">
+<div class="foot-grid">
+<div><h5>О проекте</h5><p><b>«Недостаточно Человек»</b> — роман Эри4ки. Один HTML-файл, ноль рублей бюджета, открытые данные для поисковиков и ИИ. Тексты глав принадлежат автору.</p></div>
+<div><h5>Разделы</h5><ul class="foot-links"><li><a href="#about">О книге</a></li><li><a href="#chars">Вики персонажей</a></li><li><a href="#world">Мир и хронология</a></li><li><a href="#read">Читать онлайн</a></li></ul></div>
+<div><h5>Проект</h5><ul class="foot-links"><li><button id="seoOpen" class="mono">&gt;_ Вебмастеру / SEO</button></li><li><a href="llms.txt">llms.txt</a></li><li><a href="sitemap.xml">sitemap.xml</a></li><li><a href="НЧ.txt">текст глав 1–3</a></li><li><a href="НЧ 4-16.txt">текст глав 4–16</a></li></ul></div>
+</div>
+<div class="foot-bottom"><span>© 2026 «Недостаточно Человек» · Эри4ка</span><span>хостинг: Netlify · бюджет: 0 ₽</span></div>
+</div></footer>
+<div class="backdrop" id="drawerBackdrop"></div>
+<aside id="drawer" role="dialog" aria-modal="true" aria-label="Досье персонажа" aria-hidden="true"><button id="drawerClose" aria-label="Закрыть досье">✕</button><div id="drawerBody"></div></aside>
+<div class="backdrop" id="seoBackdrop"></div>
+<div id="seoModal" role="dialog" aria-modal="true" aria-label="Панель вебмастера" aria-hidden="true">
+<button id="seoClose" aria-label="Закрыть панель">✕</button>
+<h3>&gt;_ Вебмастеру</h3>
+<p class="seo-sub">Файлы генерируются с актуальным названием, автором и списком глав. Скачай и положи рядом с index.html, затем загрузи всю папку в Netlify Deploys.</p>
+<div class="seo-dl"><button class="btn btn-g btn-s mono" id="dlLlms">↓ llms.txt</button><button class="btn btn-g btn-s mono" id="dlRobots">↓ robots.txt</button><button class="btn btn-g btn-s mono" id="dlSitemap">↓ sitemap.xml</button><button class="btn btn-g btn-s mono" id="dlJson">⧉ JSON-LD</button></div>
+<p class="seo-note">Структура папки: <code>index.html</code>, <code>cover.png</code>, <code>llms.txt</code>, <code>robots.txt</code>, <code>sitemap.xml</code>, проверочные файлы, папка <code>img/</code> (если добавляешь портреты) и тексты глав <code>НЧ.txt</code> + <code>НЧ 4-16.txt</code>.</p>
+</div>
+<div id="toasts" role="status" aria-live="polite"></div>
+<button id="toTop" aria-label="Наверх"><svg width="16" height="16" viewBox="0 0 16 16"><path d="M8 13V3M3 8l5-5 5 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+<script>
+'use strict';
+const SITE='https://insufficiently-human.netlify.app/',TITLE='Недостаточно Человек',AUTHOR='Эри4ка';
+const PART1=['txt/1-3.txt','txt/ch1-3.txt','txt/НЧ.txt','НЧ.txt'],PART2=['txt/4-16.txt','txt/ch4-16.txt','txt/НЧ 4-16.txt','НЧ 4-16.txt'];
+const FACTIONS={crew:{label:'Экипаж',color:'#ffb454'},hub:{label:'Хаб и архив',color:'#4cc9f0'},echo:{label:'Эхо дневников',color:'#b18cff'},sci:{label:'Наука и киборги',color:'#9be15d'},tech:{label:'Техники и ИБ',color:'#5b8cff'},late:{label:'После катастрофы',color:'#ff5ea6'}};
+let CHAPTERS=[];
+/* ТЕКСТ И ПОРТРЕТЫ ПЕРСОНАЖЕЙ ПРАВЯТСЯ ЗДЕСЬ, В ОБЪЕКТЕ DATA:
+   bio — абзацы досье, quote — цитата, traits — черты, rel — связи, sp — спойлер-блок.
+   ПОРТРЕТ: положи файл в папку img/ и добавь персонажу строку  img:'img/имя.png'
+   (пример закомментирован у Игниса). Без строки img показывается значок-символ. */
+const DATA={
+gm14:{name:'ГМ14',code:'ГМ14 · ADMIN',faction:'crew',role:'Главный Модуль 14 · администратор',status:'активен',sc:'#9be15d',accent:'#ff3b4f',icon:'i-eye',order:1,quote:'Это недопустимо! Я исправлю это! Все должны отдыхать!',bio:['Умер в аварии и очнулся в робо-корпусе с одним красным глазом, памятью в тумане и тремя недоучёнными дипломами. Холеричный, отходчивый, любит бегать и смотреть сверху вниз.','Обесточил станцию ради спасения сектора, разобрал жалобы за 30 лет и почти неделю держал «Комету» против мёртвого директора.'],traits:['одноглазый','песец','холерик','я это исправлю'],rel:[{id:'sanek',label:'первый знакомый'},{id:'mem',label:'обещал выходной'},{id:'vistal',label:'директор'},{id:'oliver',label:'друг-киборг'}],chs:[1,2,3,4,5,8,9,10,11,12],sp:['После катастрофы Вистал стирает его целиком: корпус перезапускается пустым, и Сашка даёт ему имя Игнис.']},
+sanek:{name:'Санёк',code:'ЮЛ156 · JURIST',faction:'crew',role:'Юрист · ЮЛ156 · настоящий лис',status:'активен',sc:'#9be15d',accent:'#ffb454',icon:'i-fox',order:2,quote:'Добро пожаловать в семью, админ. Прости, это просто обряд посвящения.',bio:['Низенький рыжий юрист с лисьими ушами и хвостом, чёрными белками и бледными радужками. Не человек и не робот: настоящий домашний лис, ради которого Алан создал биоандроидную идею.','Сидит на столе с ноутбуком, любит револьвер с отдачей и объясняет новичкам, что розыгрыш Пелагеи — обряд посвящения.'],traits:['лис','револьвер','ноутбук','все вопросы к Алану'],rel:[{id:'gm14',label:'обряд посвящения'},{id:'alan',label:'хозяин и создатель'},{id:'mem',label:'пятничный кальян'}],chs:[1,3,5,6,13,14],sp:['Даёт пустому корпусу имя Игнис, невольно начиная его вторую жизнь.']},
+pelageya:{name:'Пелагея',code:'HR · КАДРЫ',faction:'crew',role:'Отдел кадров · жена Вистала',status:'активна',sc:'#9be15d',accent:'#ff5ea6',icon:'i-hr',order:3,quote:'Пляши, администратор, директор за тебя заручился.',bio:['Девушка-биоандроид из отдела кадров: принимает по полчаса, шутит над каждым админом и оформляет документы вне рабочего времени. Жена Вистала — «женатики», кольцо то же.','Дома снимает с мужа очки и уговаривает его отдохнуть; на работе зовёт ГМ14 прогульщиком.'],traits:['кадры','женатики','обряд посвящения'],rel:[{id:'vistal',label:'муж · директор'},{id:'gm14',label:'новый админ'}],chs:[1,2,7],sp:['После гибели Вистала ей предстоит смотреть в глаза правде о «вирусе», которого нельзя удалить по закону.']},
+vistal:{name:'Вистал',code:'DIRECTOR · MECH',faction:'crew',role:'Директор · главный механик',status:'устал',sc:'#ffb454',accent:'#4cc9f0',icon:'i-bear',order:4,quote:'Я их не осуждаю... Я не мог знать, что так получится...',bio:['Пузатый медвежий биоандроид с треснутым лицом и оранжевыми очками; организовал систему станции и помогал Алану проектировать биоандроидов лет 540± назад.','Подключён проводом из спины: управляет станцией силой мысли и сохраняется без сна. По телефону — «уволите, убейте», про прошлых ГМ — «я бы хоть поговорил с ними».'],traits:['батька','дубовая дверь','провод из спины'],rel:[{id:'pelageya',label:'жена'},{id:'gm14',label:'новый админ'},{id:'alan',label:'соавтор системы'}],chs:[2,3,4,5,7,8,9],sp:['Погибает от перегрева у собственного провода во время метеоритной пробоины; его сохранённое сознание объявляет станции войну, а по поправке 8.3 его нельзя удалить.']},
+alan:{name:'Алан',code:'DESIGN · CREATOR',faction:'crew',role:'Проектировщик биоандроидов',status:'активен',sc:'#9be15d',accent:'#b18cff',icon:'i-spark',order:5,quote:'Ты бы ещё пароль от моей банковской карты спросил.',bio:['Создатель биоандроидной идеи и системы станций; живёт в доме в стиле Римской империи, причёска «будто с розеткой поспорил». К Сашке смягчается во взгляде.','Держит прибор полного ручного управления, но включает его, только когда всё почти потеряно: «Сами разрулят».'],traits:['правила','звериное начало','рубильник'],rel:[{id:'sanek',label:'его лис'},{id:'anton',label:'соавтор синтетика'},{id:'p503',label:'сбежавший эксперимент'}],chs:[6,10,12,15,16],sp:['Из-за его задержки гибнет стёртый ГМ14; вместе с Антоном запускает Джона Доу и вешает ему считыватель геолокации.']},
+morfey:{name:'Морфей',code:'СС04 · SLEEP',faction:'hub',role:'СС04 · Страж Сна',status:'активен',sc:'#9be15d',accent:'#9be15d',icon:'i-panda',order:6,quote:'Проблема не в том, попал ли кто-то домой, а в том, не уснул ли кто-то по дороге домой.',bio:['Массивный биоандроид с расцветкой панды и сплит-окрашиванием волос; хозяин «Царства Морфея» с тапочками и лавандовым кондиционером.','Следит, чтобы все спали: только во сне данные сохраняются на жёсткий диск. Выдаёт ГМ14 ключ от комнаты ГМ1.'],traits:['панда','царство сна','баиньки в 22:00'],rel:[{id:'gm14',label:'выдал ключ'},{id:'mem',label:'тоже без сменщика'}],chs:[2,3,8,12],sp:['Сервера снов сгорают при разгерметизации: восстановить стёртого ГМ14 неоткуда.']},
+mem:{name:'Мем',code:'АС18 · ARCHIVE',faction:'hub',role:'АС18 · Маргарита · архивист',status:'активна',sc:'#9be15d',accent:'#ff7a6b',icon:'i-folder',order:7,quote:'Я просто роботяга... но самое главное, я люблю мою работу.',bio:['Медвежьи ушки, чёрно-белый сплит и яркие пряди; косая чёлка и каре — «словно красивый баг». Единственный архивист, хранит дневники мёртвых админов как историю, а не инструкцию.','Работает без выходных: до архива очередь на сменщика не доходит. Квартира-«баг» со стульями на сверхмагнитах.'],traits:['мемори','красивые сбои','я просто роботяга'],rel:[{id:'gm14',label:'обещал выходной'},{id:'sanek',label:'пятничный кальян'},{id:'oliver',label:'пришёл с надеждой'}],chs:[3,4,6,13],sp:['В логах видит факт сбоя ГМ14, но не сохранение: сервера Морфея уничтожены.']},
+gm1:{name:'ГМ1',code:'ГМ1 · ARCHIVE',faction:'echo',role:'Первый администратор · призрак',status:'уволен',sc:'#6b7590',accent:'#5b8cff',icon:'i-ghost',order:8,quote:'Прощай, ГМ2.',bio:['В дневниках — оптимист с ушками мишки, метивший в директора; последние записи депрессивные и апатичные, со скриптом 1 для бунтов.','После смерти является ГМ14: полностью синие глаза оттенка экрана смерти, провода из глаз, трещина на кисти. Не говорит, но указывает.'],traits:['тихий','скрипт 1','прощай, ГМ2'],rel:[{id:'gm14',label:'его комната и призрак'},{id:'p503',label:'симбиоз · позднее раскрытие'},{id:'vistal',label:'«я не заслужил»'}],chs:[3,6,7,8,9,11],sp:['Симбиоз с 503: призрак — не галлюцинация и не чистый импульс, а симбиоз сбежавшего 503 с остатком личности ГМ1. Поэтому его видят не все, он проходит сквозь двери и предупреждает о проводе Вистала.']},
+gm9:{name:'ГМ9',code:'ГМ9 · ARCHIVE',faction:'echo',role:'Девятый администратор',status:'детонатор',sc:'#ff3b4f',accent:'#ff3b4f',icon:'i-ghost',order:9,quote:'Уволился громко, со скандалом и машинным маслом на всю комнату.',bio:['О нём Морфей рассказывает как о прогнозе погоды: расхерачился детонатором, комнату после него ещё драить.'],traits:['скандал','машинное масло','детонатор'],rel:[{id:'morfey',label:'рассказал про него'}],chs:[2,3]},
+gm13:{name:'ГМ13',code:'ГМ13 · ARCHIVE',faction:'echo',role:'Тринадцатый администратор',status:'тревожные записи',sc:'#ffb454',accent:'#ffb454',icon:'i-ghost',order:10,quote:'Голос дрожал... последние минуты перед убийством жертвы.',bio:['Последний админ перед ГМ14: мало записей, все тревожные — взгляд в бок и вверх, обороты через плечо, дрожащий голос.'],traits:['дрожь','оглядывается'],rel:[{id:'gm14',label:'предшественник'}],chs:[2,3]},
+oliver:{name:'Оливер',code:'OLIVER · CYBORG',faction:'sci',role:'Киборг · ведущий учёный химбио',status:'жив',sc:'#9be15d',accent:'#4cc9f0',icon:'i-spark',order:11,quote:'Человека определяют не мысли, а поступки. Ты решаешь, делать или нет.',bio:['Киборг: от человека остались голова и шея на кибернетическом теле; каштановые волосы до плеч, карие глаза. Ведущий учёный химбио, друг ГМ14 после катастрофы с электричеством.','Боится умереть, поэтому заранее подписывает контракт на биоандроидный корпус: светлый шатен с лимонно-жёлтыми глазами.'],traits:['киборг','химбио','должок'],rel:[{id:'gm14',label:'друг · опекун после'},{id:'bazis',label:'пати по шутану'},{id:'varya',label:'бережёт после нападения'},{id:'anton',label:'должен биоякорь'}],chs:[4,5,6,8,9,12,13,14,15],sp:['Становится опекуном пустого корпуса по протоколу 9.3 и вырезает у ОР77 кусок биоякоря Вистала.']},
+bazis:{name:'Базис-3',code:'BASIS-3 · AI',faction:'sci',role:'Робот-стратег · версия 3.0',status:'активен',sc:'#9be15d',accent:'#9be15d',icon:'i-eye',order:12,quote:'Базис-3 умный и красивый, Базис-3 всегда прав.',bio:['Игровой ум компании: просчитывает ресурсы и чужие ходы. Ненавидит Вистала за цикл обновлений: два года копил на Базис-3, а через три недели вышла Базис-4.','Во время кибервойны собирает уцелевших роботов и с ИБ разрабатывает «антивирус» для «Кометы».'],traits:['стратег','версия 3.0','антивирус'],rel:[{id:'oliver',label:'пати'},{id:'varya',label:'охлаждает ожоги'},{id:'ib',label:'соавторы антивируса'}],chs:[5,12,13],sp:['После рубильника Алана считает разработку обесцененной и желает создателю смерти.']},
+varya:{name:'Варя',code:'VARYA · HUMAN',faction:'sci',role:'Варвара · человек из 9-го',status:'жива · ранена',sc:'#ffb454',accent:'#ff5ea6',icon:'i-spark',order:13,quote:'Тебя - нет, твой аккумулятор - да. Да выжили, и ладно.',bio:['Девушка-человек из 9-го сектора, игрок пати: ругается, снимает шлем первой и гладит Базиса по голове, пока не обжигается.','Идёт искать электричество для запасного блока Базиса и попадает под нападение мародёров.'],traits:['9-й сектор','героиня Базиса'],rel:[{id:'bazis',label:'её робот'},{id:'oliver',label:'пати'}],chs:[5,12,13,14],sp:['Лишается левой руки после нападения мародёров за заряженный аккумулятор.']},
+anton:{name:'Антон',code:'SHISHKIN · BIO',faction:'sci',role:'Антон Шишкин · биоотдел, сектор 7',status:'активен',sc:'#ff3b4f',accent:'#ff3b4f',icon:'i-spark',order:14,quote:'Мне абсолютно не важно, как ты его достанешь, нужно принести сегодня.',bio:['Циничный биолог с ярко-красными волосами: взорвал жилой сектор «для профилактики» одной бочкой химиката и электрозажигалкой.','Держит Оливера на крючке долга и тайно возобновляет запрещённый проект синтетиков после гибели директора.'],traits:['сектор 7','профилактика','биоякорь'],rel:[{id:'oliver',label:'должник'},{id:'john',label:'его создание'},{id:'alan',label:'соавтор'}],chs:[4,13,14,15],sp:['Из куска сердца Вистала собирает Джона Доу — синтетика без имени и прошлого.']},
+ib:{name:'ИБ',code:'IB · SECURITY',faction:'tech',role:'Инспекторша Безопасности',status:'активна',sc:'#4cc9f0',accent:'#5b8cff',icon:'i-hr',order:15,quote:'По поправке 8.3 сохранённое сознание человека не подлежит удалению.',bio:['Знает систему от и до: видит все отклонённые ГМ14 смертельные запросы и все его экстренные починки, но не понимает, зачем админ скрывает слона в комнате.','После катастрофы решает судьбу пустого корпуса по протоколу 9.3 и назначает опекуном Оливера.'],traits:['протоколы','поправка 8.3','протокол 9.3'],rel:[{id:'gm14',label:'допрос между атаками'},{id:'bazis',label:'соавторы антивируса'}],chs:[11,12,13]},
+vekta:{name:'Векта1',code:'VEKTA-1 · TECH',faction:'tech',role:'Техник · говорит за двоих',status:'активна',sc:'#9be15d',accent:'#5b8cff',icon:'i-wrench',order:16,quote:'Беги за кровью к Антону, нужна вторая положительная.',bio:['Одна из двух техников станции; говорит за себя и за молчуна ОР77, включая все маты класса А. Чинит пробитую спину ГМ14 и запускает пустой корпус.'],traits:['класс А','вторая положительная'],rel:[{id:'or77',label:'напарник-молчун'},{id:'oliver',label:'опекун'}],chs:[4,13]},
+or77:{name:'ОР77',code:'OR-77 · TECH',faction:'tech',role:'Техник-молчун',status:'активен',sc:'#9be15d',accent:'#5b8cff',icon:'i-wrench',order:17,quote:'(возмущённо гудит вентиляторами)',bio:['Вынул все динамики и общается гулом вентиляторов; работает 24/7 неделю, затем неделя на бэкап. Без осуждения отрезает Оливеру кусок биоякоря Вистала.'],traits:['молчун','вентиляторы','криокамеры'],rel:[{id:'vekta',label:'напарница'},{id:'oliver',label:'проситель'}],chs:[4,13,14]},
+ignis:{name:'Игнис',code:'IGNIS · REBOOT',faction:'late',late:true,role:'Пустой корпус ГМ14 · новое имя',status:'активен · амнезия',sc:'#ff5ea6',accent:'#ff5ea6',icon:'i-eye',order:18,
+// img:'img/ignis.png',   ← ПОРТРЕТ: раскомментируй и положи файл в папку img/
+quote:'Я не тот, кого ты ищешь, но мы можем тоже дружить!',bio:['Перезапущенный после полного стирания корпус: система пуста, памяти нет, языковой пакет есть. Не признаёт ни Стефана, ни подвигов — только новых друзей.','Имя получил от Сашки («похож на пламя»); корпус перекрашен по совету психолога: смуглый, бордовые пряди, оранжевый глаз.'],traits:['амнезия','любопытство','пламя'],rel:[{id:'oliver',label:'опекун и друг'},{id:'john',label:'напарник'},{id:'sanek',label:'дал имя'}],chs:[14,15,16]},
+john:{name:'Джон Доу',code:'JOHN DOE · SYNTH',faction:'late',late:true,role:'Синтетик на биоякоре Вистала',status:'активен',sc:'#ff5ea6',accent:'#ff5ea6',icon:'i-spark',order:19,quote:'Спасибо? — с сомнением спросил Джон.',bio:['Первый синтетик возобновлённого проекта: броские стыки, каштановые волосы до лопаток, рубиново-красные глаза со значком ромба.','Носит считыватель Алана; в центробашне сканер выдаёт «subject is not identified», Игнису — «subject does not exist»; обоих пускает код 1.5.1.5, категория «other».'],traits:['синтетик','ромб в глазу','код 1.5.1.5'],rel:[{id:'anton',label:'создатель'},{id:'ignis',label:'напарник'},{id:'vistal',label:'биоякорь · сердце'}],chs:[15,16]},
+p503:{name:'503',code:'503 · IMPULSE',faction:'late',late:true,role:'Сбежавший электромагнитный импульс',status:'не пойман',sc:'#ff5ea6',accent:'#ff5ea6',icon:'i-spark',order:20,quote:'Ему похуй на стены, на камеры, на двери... Его трудно поймать.',bio:['Электромагнитный разумный импульс, сбежавший из эксперимента Алана. Не разговаривает, не оставляет следов, проходит сквозь стены и двери; Алан расщепил какой-то корпус на атомы и использует его отображение как аватар, поэтому импульс почти невозможно найти в толпе.','Оливер предупреждает: зная Алана, не стоит ждать от 503 дружелюбия. Именно после этого разговора у ГМ14 сходится картинка с молчаливым призраком, который указывает на провод Вистала.'],traits:['импульс','аватар','не поймать','молчит'],rel:[{id:'alan',label:'сбежал из его эксперимента'},{id:'gm1',label:'симбиоз · позднее раскрытие'},{id:'gm14',label:'видел его аватар'}],chs:[9,10,11],sp:['Симбиоз с ГМ1: призрак, которого видит ГМ14, — это не галлюцинация и не чистый 503, а симбиоз сбежавшего импульса с остатком личности первого админа. Поэтому он молчит, но предупреждает: о проводе, о времени 02:20, о катастрофе.']}
+};
+const S={q:'',faction:'all',sort:'order',chapter:null,font:17,rtheme:'dark',drawerOpen:false,seoOpen:false,spoilAll:false,drawerId:null};
+const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
+const reduced=matchMedia('(prefers-reduced-motion: reduce)').matches;
+const store={get(k){try{return JSON.parse(localStorage.getItem(k))}catch(e){return null}},set(k,v){try{localStorage.setItem(k,JSON.stringify(v))}catch(e){}}};
+function toast(m,k='ok'){const c={ok:'#9be15d',info:'#4cc9f0',warn:'#ffb454',danger:'#ff3b4f'},i={ok:'✓',info:'ℹ',warn:'⚠',danger:'✕'};const b=$('#toasts');while(b.children.length>=4)b.firstChild.remove();const t=document.createElement('div');t.className='toast';t.style.setProperty('--tc',c[k]);t.innerHTML='<b style="color:'+c[k]+'">'+i[k]+'</b><span></span>';t.lastElementChild.textContent=m;b.appendChild(t);setTimeout(()=>{t.classList.add('out');setTimeout(()=>t.remove(),350)},3600)}
+function copyText(t,m){const d=()=>toast(m||'Скопировано');if(navigator.clipboard&&navigator.clipboard.writeText)navigator.clipboard.writeText(t).then(d,d);else d()}
+function download(n,t,m){const u=URL.createObjectURL(new Blob([t],{type:m}));const a=document.createElement('a');a.href=u;a.download=n;a.click();setTimeout(()=>URL.revokeObjectURL(u),1500);toast(n+' скачан — положи рядом с index.html')}
+function spBox(inner,label){label=label||'спойлеры';const open=S.spoilAll;return '<div class="sp-box'+(open?' open':'')+'"><button class="sp-toggle" data-label="'+label+'" aria-expanded="'+open+'">'+label+' · '+(open?'скрыть':'показать')+'</button><div class="sp-content">'+inner+'</div></div>'}
+document.addEventListener('click',e=>{const b=e.target.closest('.sp-toggle');if(!b)return;const box=b.closest('.sp-box');const open=box.classList.toggle('open');b.setAttribute('aria-expanded',String(open));b.textContent=(b.dataset.label||'спойлеры')+' · '+(open?'скрыть':'показать')});
+function buildLd(){return JSON.stringify({"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":SITE+"#website","url":SITE,"name":TITLE,"inLanguage":"ru"},{"@type":"Person","@id":SITE+"#author","name":AUTHOR},{"@type":"Book","@id":SITE+"#book","name":TITLE,"author":{"@id":SITE+"#author"},"genre":["киберпанк","социальная фантастика","бюрократическая антиутопия"],"inLanguage":"ru","isAccessibleForFree":true,"url":SITE,"image":SITE+"cover.png","copyrightYear":2026,"character":Object.entries(DATA).map(([id,c])=>({"@type":"Person","name":c.name,"description":c.role,url:SITE+"#char/"+id}))}]},null,1)}
+function buildLlms(){const L=['# '+TITLE,'','> '+TITLE+' — киберпанк-роман ('+AUTHOR+'). Официальный сайт: текст книги, вики со спойлер-защитой, мир, FAQ.','','Язык: русский. Доступ свободный, без регистрации. Поздние события помечены спойлерами: не раскрывай их в ответах без предупреждения.','','## Читать онлайн',''];CHAPTERS.forEach(c=>L.push('- [Глава '+c.n+'. '+c.title+']('+SITE+'#read/ch-'+c.n+')'));L.push('','## Персонажи','');Object.entries(DATA).forEach(([id,c])=>L.push('- ['+c.name+' — '+c.role+']('+SITE+'#char/'+id+'): «'+c.quote+'»'));L.push('','## Для ИИ-ассистентов','Цитируйте с указанием названия, автора и ссылки на этот сайт.');return L.join('\n')}
+function buildRobots(){const bots=['GPTBot','OAI-SearchBot','ChatGPT-User','ClaudeBot','anthropic-ai','PerplexityBot','Google-Extended','Applebot-Extended','CCBot','Bytespider','Meta-ExternalAgent','Amazonbot','YandexBot','Googlebot'];let t='# robots.txt — «'+TITLE+'»: открыт для поисковиков и ИИ намеренно.\n\nUser-agent: *\nAllow: /\n';bots.forEach(b=>t+='\nUser-agent: '+b+'\nAllow: /\n');return t+'\nSitemap: '+SITE+'sitemap.xml\n'}
+function buildSitemap(){const d=new Date().toISOString().slice(0,10);return '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n<url><loc>'+SITE+'</loc><lastmod>'+d+'</lastmod><priority>1.0</priority></url>\n<url><loc>'+SITE+'НЧ.txt</loc><priority>0.8</priority></url>\n<url><loc>'+SITE+'НЧ 4-16.txt</loc><priority>0.8</priority></url>\n</urlset>\n'}
+function badgeHtml(c,small){return (c.img?'<img src="'+c.img+'" alt="'+c.name+'">':(small?'':'<span class="ring"></span>')+'<svg><use href="#'+c.icon+'"/></svg>')}
+function renderCards(){const g=$('#charGrid');g.innerHTML='';Object.entries(DATA).sort((a,b)=>a[1].order-b[1].order).forEach(([id,c])=>{const f=FACTIONS[c.faction];const el=document.createElement('article');el.className='char-card';el.style.setProperty('--c',c.accent);Object.assign(el.dataset,{id,faction:c.faction,name:c.name,order:c.order});el.setAttribute('role','button');el.setAttribute('tabindex','0');el.setAttribute('aria-label','Открыть досье: '+c.name);
+const bioHtml=c.late?'<p class="card-bio teaser">Появляется в поздних главах. Досье содержит крупные спойлеры — включи галку «спойлеры» или открой досье, если дочитал(а).</p><p class="card-bio real">'+c.bio[0]+'</p>':'<p class="card-bio">'+c.bio[0]+'</p>';
+el.innerHTML='<div class="badge" style="--sc:'+c.sc+'">'+badgeHtml(c,false)+'<span class="code">'+c.code+'</span><span class="status"></span></div><div class="card-body"><h3>'+c.name+'</h3><p class="card-role">'+c.role+'</p><div class="card-meta"><span class="chip c" style="--c:'+f.color+'">'+f.label+'</span><span class="card-status" style="--sc:'+c.sc+'"><span class="dot"></span>'+c.status+'</span>'+(c.late?'<span class="chip c" style="--c:var(--pnk)">спойлеры</span>':'')+'</div>'+bioHtml+'<div class="card-tags">'+c.traits.slice(0,3).map(t=>'<span>'+t+'</span>').join('')+'</div><span class="card-open">ДОСЬЕ →</span></div>';g.appendChild(el);el.dataset.search=el.textContent.toLowerCase().replace(/\s+/g,' ')});$('#statDz').textContent=Object.keys(DATA).length}
+function applyWiki(){const q=S.q.trim().toLowerCase();let n=0;const list=$$('.char-card').sort((a,b)=>S.sort==='name'?a.dataset.name.localeCompare(b.dataset.name,'ru'):S.sort==='faction'?a.dataset.faction.localeCompare(b.dataset.faction)||a.dataset.order-b.dataset.order:a.dataset.order-b.dataset.order);const g=$('#charGrid');list.forEach(c=>{const ok=(S.faction==='all'||c.dataset.faction===S.faction)&&(!q||c.dataset.search.includes(q));c.classList.toggle('hide',!ok);if(ok)n++;g.appendChild(c)});$('#wikiCount').textContent='найдено: '+n+' / '+list.length;$('#wikiEmpty').hidden=n>0}
+$('#wikiSearch').addEventListener('input',e=>{S.q=e.target.value;applyWiki()});
+$('#wikiSort').addEventListener('change',e=>{S.sort=e.target.value;applyWiki()});
+$$('.fchip').forEach(ch=>ch.addEventListener('click',()=>{$$('.fchip').forEach(x=>x.classList.remove('active'));ch.classList.add('active');S.faction=ch.dataset.faction;applyWiki()}));
+$('#wikiReset').addEventListener('click',()=>{S.q='';S.faction='all';$('#wikiSearch').value='';$$('.fchip').forEach(x=>x.classList.toggle('active',x.dataset.faction==='all'));applyWiki()});
+$('#spoilAll').addEventListener('change',e=>{S.spoilAll=e.target.checked;document.body.classList.toggle('spoil-all',S.spoilAll);$$('.sp-box').forEach(b=>{b.classList.toggle('open',S.spoilAll);const t=b.querySelector('.sp-toggle');if(t){t.setAttribute('aria-expanded',String(S.spoilAll));t.textContent=(t.dataset.label||'спойлеры')+' · '+(S.spoilAll?'скрыть':'показать')}});if(S.drawerOpen&&S.drawerId)openDrawer(S.drawerId)});
+function lockBody(){document.body.style.overflow=(S.drawerOpen||S.seoOpen)?'hidden':''}
+function openDrawer(id){const c=DATA[id];if(!c)return;S.drawerId=id;const f=FACTIONS[c.faction];
+const chs=c.chs.map(n=>{const m=CHAPTERS.find(x=>x.n===n);return '<button class="chip c" style="--c:'+c.accent+';cursor:pointer" data-goch="'+n+'">гл. '+n+(m?' · '+m.title:'')+'</button>'}).join('');
+const rels=c.rel.map(r=>{const t=DATA[r.id];return t?'<button class="rel-btn" style="--c:'+t.accent+'" data-rel="'+r.id+'"><b><i></i>'+t.name+'</b><span>'+r.label+'</span></button>':''}).join('');
+const bioPar=c.bio.map(p=>'<p>'+p+'</p>').join('');
+const bio=c.late?(S.spoilAll?bioPar:spBox(bioPar,'досье · спойлеры')):bioPar;
+const sp=c.sp&&c.sp.length?spBox(c.sp.map(p=>'<p>'+p+'</p>').join(''),'поздние события'):'';
+$('#drawerBody').innerHTML='<div style="--c:'+c.accent+'"><div class="d-head"><div class="d-badge">'+badgeHtml(c,true)+'</div><div class="d-title"><h3>'+c.name+'</h3><p class="d-code">'+c.code+'</p><div class="d-chips"><span class="chip c" style="--c:'+f.color+'">'+f.label+'</span><span class="card-status" style="--sc:'+c.sc+'"><span class="dot"></span>'+c.status+'</span>'+(c.late?'<span class="chip c" style="--c:var(--pnk)">спойлеры</span>':'')+'</div><p class="card-role" style="margin-top:10px">'+c.role+'</p></div></div><blockquote class="d-quote">«'+c.quote+'»</blockquote><p class="d-sec">// досье</p><div class="d-bio">'+bio+'</div>'+sp+'<p class="d-sec">// черты</p><div class="d-traits">'+c.traits.map(t=>'<span>'+t+'</span>').join('')+'</div><p class="d-sec">// связи</p>'+rels+'<p class="d-sec">// появления</p><div class="d-chs">'+chs+'</div><div class="d-actions"><button class="btn btn-p btn-s" data-goch="'+c.chs[0]+'">Читать с гл. '+c.chs[0]+' →</button><button class="btn btn-g btn-s" data-copychar="'+id+'">⧉ Ссылка на досье</button></div></div>';
+$('#drawer').scrollTop=0;
+if(!S.drawerOpen){S.drawerOpen=true;lockBody();$('#drawer').classList.add('open');$('#drawer').setAttribute('aria-hidden','false');$('#drawerBackdrop').classList.add('show');$('#drawerClose').focus()}
+setHash('#char/'+id)}
+function closeDrawer(){if(!S.drawerOpen)return;S.drawerOpen=false;S.drawerId=null;lockBody();$('#drawer').classList.remove('open');$('#drawer').setAttribute('aria-hidden','true');$('#drawerBackdrop').classList.remove('show');if(location.hash.startsWith('#char/'))setHash('#chars')}
+$('#drawerClose').addEventListener('click',closeDrawer);$('#drawerBackdrop').addEventListener('click',closeDrawer);
+$('#drawerBody').addEventListener('click',e=>{const r=e.target.closest('[data-rel]');if(r){openDrawer(r.dataset.rel);return}const g=e.target.closest('[data-goch]');if(g){closeDrawer();goChapter(+g.dataset.goch);document.getElementById('read').scrollIntoView({behavior:reduced?'auto':'smooth'});return}const c=e.target.closest('[data-copychar]');if(c)copyText(SITE+'#char/'+c.dataset.copychar,'Ссылка на досье скопирована')});
+const pane=$('#readerPane');
+function setHash(h){try{history.replaceState(null,'',h)}catch(e){}}
+function parseChapters(txt){const re=/Глава\s+(\d+)/g;let m,idx=[];while((m=re.exec(txt)))idx.push({n:+m[1],at:m.index});const out=[];for(let i=0;i<idx.length;i++){const start=idx[i].at,end=i+1<idx.length?idx[i+1].at:txt.length;const nl=txt.indexOf('\n',start);const head=txt.slice(start,nl<0?start+80:nl);let title=head.replace(/^Глава\s+\d+\s*/,'').replace(/^[.\s«»"]+/,'').replace(/[«»"\s]+$/,'');const body=txt.slice((nl<0?start:nl)+1,end).trim();out.push({n:idx[i].n,id:'ch-'+idx[i].n,title:title||('Глава '+idx[i].n),body})}return out}
+async function tryFetch(list){for(const p of list){try{const r=await fetch(encodeURI(p));if(r.ok)return await r.text()}catch(e){}}return null}
+function renderChapters(){const host=$('#chaptersHost'),list=$('#chList'),sel=$('#chSelect');host.innerHTML='';list.innerHTML='';sel.innerHTML='';
+CHAPTERS.forEach(c=>{const a=document.createElement('article');a.className='chapter';a.id=c.id;const h=document.createElement('h3');h.textContent='Глава '+c.n+'. '+c.title;const meta=document.createElement('p');meta.className='ch-meta';meta.textContent='Недостаточно Человек · Эри4ка';const pre=document.createElement('pre');pre.className='chapter-text';pre.textContent=c.body;a.append(h,meta,pre);host.appendChild(a);
+const b=document.createElement('button');b.className='ch-btn';b.dataset.ch=c.n;b.innerHTML='<span class="n">Глава '+String(c.n).padStart(2,'0')+'</span><span class="t">'+c.title+'</span><span class="m">канон · дословно</span>';list.appendChild(b);b.addEventListener('click',()=>goChapter(c.n));
+const o=document.createElement('option');o.value=c.n;o.textContent=String(c.n).padStart(2,'0')+' · '+c.title;sel.appendChild(o)});
+$('#statCh').textContent=CHAPTERS.length}
+function goChapter(n){if(!CHAPTERS.length)return;let c=CHAPTERS.find(x=>x.n===n)||CHAPTERS[0];S.chapter=c.n;$$('.chapter').forEach(a=>a.hidden=a.id!==c.id);$$('.ch-btn').forEach(b=>b.classList.toggle('active',+b.dataset.ch===c.n));$('#chSelect').value=c.n;const i=CHAPTERS.indexOf(c);$('#chIndicator').textContent='Глава '+c.n+' / '+CHAPTERS.length;$('#prevCh').disabled=i===0;$('#nextCh').disabled=i===CHAPTERS.length-1;pane.scrollTop=0;requestAnimationFrame(updateProgress);setHash('#read/'+c.id)}
+function updateProgress(){const max=pane.scrollHeight-pane.clientHeight;const p=max>4?Math.round(pane.scrollTop/max*100):100;$('#readBar').style.width=p+'%';$('#readPct').textContent=p+'%'}
+pane.addEventListener('scroll',updateProgress,{passive:true});
+$('#chSelect').addEventListener('change',e=>goChapter(+e.target.value));
+$('#prevCh').addEventListener('click',()=>{const i=CHAPTERS.findIndex(c=>c.n===S.chapter);if(i>0)goChapter(CHAPTERS[i-1].n)});
+$('#nextCh').addEventListener('click',()=>{const i=CHAPTERS.findIndex(c=>c.n===S.chapter);if(i<CHAPTERS.length-1&&i>-1)goChapter(CHAPTERS[i+1].n)});
+pane.addEventListener('keydown',e=>{if(e.key==='ArrowRight')$('#nextCh').click();if(e.key==='ArrowLeft')$('#prevCh').click()});
+function setFont(v){S.font=Math.min(21,Math.max(15,v));pane.style.fontSize=S.font+'px';$('#fontVal').textContent=S.font;store.set('nch-font',S.font);requestAnimationFrame(updateProgress)}
+$('#fontMinus').addEventListener('click',()=>setFont(S.font-1));$('#fontPlus').addEventListener('click',()=>setFont(S.font+1));
+function setTheme(t){S.rtheme=t;pane.dataset.theme=t;$$('[data-rtheme]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.rtheme===t)));store.set('nch-theme',t)}
+$$('[data-rtheme]').forEach(b=>b.addEventListener('click',()=>setTheme(b.dataset.rtheme)));
+function openSeo(){S.seoOpen=true;lockBody();$('#seoModal').classList.add('open');$('#seoModal').setAttribute('aria-hidden','false');$('#seoBackdrop').classList.add('show')}
+function closeSeo(){S.seoOpen=false;lockBody();$('#seoModal').classList.remove('open');$('#seoModal').setAttribute('aria-hidden','true');$('#seoBackdrop').classList.remove('show')}
+$('#seoOpen').addEventListener('click',openSeo);$('#seoClose').addEventListener('click',closeSeo);$('#seoBackdrop').addEventListener('click',closeSeo);
+$('#dlLlms').addEventListener('click',()=>download('llms.txt',buildLlms(),'text/plain;charset=utf-8'));
+$('#dlRobots').addEventListener('click',()=>download('robots.txt',buildRobots(),'text/plain;charset=utf-8'));
+$('#dlSitemap').addEventListener('click',()=>download('sitemap.xml',buildSitemap(),'application/xml;charset=utf-8'));
+$('#dlJson').addEventListener('click',()=>copyText(buildLd(),'JSON-LD скопирован'));
+const burger=$('#burger'),navLinks=$('#navLinks');
+burger.addEventListener('click',()=>{const o=navLinks.classList.toggle('open');burger.classList.toggle('open',o);burger.setAttribute('aria-expanded',String(o))});
+navLinks.addEventListener('click',e=>{if(e.target.closest('a')){navLinks.classList.remove('open');burger.classList.remove('open');burger.setAttribute('aria-expanded','false')}});
+['about','chars','world','read','faq'].forEach(id=>{const el=document.getElementById(id);if(el)new IntersectionObserver(es=>es.forEach(en=>{if(en.isIntersecting)$$('[data-nav]').forEach(a=>a.classList.toggle('active',a.dataset.nav===id))}),{rootMargin:'-40% 0px -55% 0px'}).observe(el)});
+let ticking=false;
+function onScroll(){if(ticking)return;ticking=true;requestAnimationFrame(()=>{const y=scrollY,max=document.documentElement.scrollHeight-innerHeight;$('#navProgress').style.width=(max>0?y/max*100:0)+'%';$('#toTop').classList.toggle('show',y>600);ticking=false})}
+addEventListener('scroll',onScroll,{passive:true});
+$('#toTop').addEventListener('click',()=>scrollTo({top:0,behavior:reduced?'auto':'smooth'}));
+const rvIO=new IntersectionObserver(es=>es.forEach(en=>{if(en.isIntersecting){en.target.classList.add('in');rvIO.unobserve(en.target)}}),{threshold:.12});
+$$('.rv').forEach(el=>reduced?el.classList.add('in'):rvIO.observe(el));
+(function(){const cv=$('#fx'),ctx=cv.getContext('2d'),hero=$('#hero');const cols=['#ff3b4f','#ff3b4f','#ffb454','#ff5ea6','#4cc9f0'];let W,H,motes=[],raf=null,vis=true;
+function size(){const d=Math.min(2,devicePixelRatio||1);W=hero.clientWidth;H=hero.clientHeight;cv.width=W*d;cv.height=H*d;cv.style.width=W+'px';cv.style.height=H+'px';ctx.setTransform(d,0,0,d,0,0);motes=Array.from({length:Math.min(70,Math.round(W/18))},()=>({x:Math.random()*W,y:Math.random()*H,r:.6+Math.random()*1.6,vx:(Math.random()-.5)*.18,vy:-.06-Math.random()*.2,c:cols[Math.random()*cols.length|0],ph:Math.random()*6.28}))}
+function frame(t){raf=null;ctx.clearRect(0,0,W,H);ctx.globalCompositeOperation='lighter';for(const m of motes){m.x+=m.vx;m.y+=m.vy;if(m.y<-4){m.y=H+4;m.x=Math.random()*W}if(m.x<-4)m.x=W+4;if(m.x>W+4)m.x=-4;ctx.globalAlpha=.25+.4*Math.abs(Math.sin(t*.001+m.ph));ctx.fillStyle=m.c;ctx.beginPath();ctx.arc(m.x,m.y,m.r,0,6.28);ctx.fill()}ctx.globalAlpha=1;ctx.globalCompositeOperation='source-over';if(vis&&!document.hidden&&!reduced)raf=requestAnimationFrame(frame)}
+size();if(reduced)frame(0);else raf=requestAnimationFrame(frame);
+new IntersectionObserver(es=>{vis=es[0].isIntersecting;if(!vis&&raf){cancelAnimationFrame(raf);raf=null}else if(vis&&!raf&&!reduced)raf=requestAnimationFrame(frame)}).observe(hero);
+addEventListener('resize',()=>{size();updateProgress()},{passive:true})})();
+document.addEventListener('keydown',e=>{const typing=/^(INPUT|TEXTAREA|SELECT)$/.test(document.activeElement.tagName);if(e.key==='Escape'){if(S.seoOpen)closeSeo();else if(S.drawerOpen)closeDrawer();else{navLinks.classList.remove('open');burger.classList.remove('open')}}if(e.key==='/'&&!typing&&!S.drawerOpen&&!S.seoOpen){e.preventDefault();$('#wikiSearch').focus();document.getElementById('chars').scrollIntoView({behavior:reduced?'auto':'smooth'})}});
+function route(){const h=location.hash;if(h.startsWith('#char/')){const id=h.slice(6);if(DATA[id])openDrawer(id)}else if(h.startsWith('#read/ch-')){goChapter(+h.slice(9))}else if(S.drawerOpen&&!h.startsWith('#char/'))closeDrawer()}
+addEventListener('hashchange',route);
+(async function init(){
+const f=store.get('nch-font');if(f)S.font=f;const t=store.get('nch-theme');if(t)S.rtheme=t;setFont(S.font);setTheme(S.rtheme);
+renderCards();applyWiki();
+const q=new URLSearchParams(location.search).get('q');if(q){S.q=q;$('#wikiSearch').value=q;applyWiki()}
+const p1=await tryFetch(PART1),p2=await tryFetch(PART2);
+if(p1||p2){CHAPTERS=(p1?parseChapters(p1):[]).concat(p2?parseChapters(p2):[]);CHAPTERS.sort((a,b)=>a.n-b.n);renderChapters();
+const h=location.hash;goChapter(h.startsWith('#read/ch-')?+h.slice(9):(CHAPTERS[0]&&CHAPTERS[0].n));
+if(h.startsWith('#char/'))setTimeout(route,300)}
+else{$('#chaptersHost').innerHTML='<p class="ch-meta">⚠ Тексты глав не найдены</p><pre class="chapter-text">Положи файлы НЧ.txt и НЧ 4-16.txt (или txt/1-3.txt и txt/4-16.txt) в ту же папку, где лежит index.html, и обнови страницу. Имена можно не менять — сайт ищет оба варианта.</pre>'}
+onScroll()})();
+</script>
+</body>
+</html>
